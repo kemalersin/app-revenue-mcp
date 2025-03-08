@@ -1,0 +1,35 @@
+{
+  "name": "app-market-intel-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for gathering market intelligence from mobile app stores (Apple App Store & Google Play)",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test:inspector": "npx @modelcontextprotocol/inspector node src/server.js",
+    "test:claude": "node src/server.js"
+  },
+  "keywords": [
+    "mcp",
+    "app-store",
+    "google-play",
+    "scraper",
+    "ai"
+  ],
+  "author": "Insightly",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "app-store-scraper": "^0.18.0",
+    "google-play-scraper": "^10.0.1"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "chai": "^5.2.0",
+    "mocha": "^11.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
