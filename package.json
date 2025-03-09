@@ -1,14 +1,22 @@
 {
-  "name": "app-market-intel-mcp",
-  "version": "1.0.0",
+  "name": "@jeromyfu/app-insight-mcp",
+  "version": "1.0.3",
   "description": "MCP server for gathering market intelligence from mobile app stores (Apple App Store & Google Play)",
   "type": "module",
   "main": "src/server.js",
+  "bin": {
+    "app-insight-mcp": "src/server.js"
+  },
+  "files": [
+    "src"
+  ],
   "scripts": {
     "start": "node src/server.js",
     "dev": "node --watch src/server.js",
     "test:inspector": "npx @modelcontextprotocol/inspector node src/server.js",
-    "test:claude": "node src/server.js"
+    "test:claude": "node src/server.js",
+    "build": "chmod +x src/server.js",
+    "prepare": "npm run build"
   },
   "keywords": [
     "mcp",
@@ -17,15 +25,15 @@
     "scraper",
     "ai"
   ],
-  "author": "Insightly",
+  "author": "Jeromy Fu",
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.6.1",
-    "app-store-scraper": "^0.18.0",
-    "google-play-scraper": "^10.0.1"
+    "app-store-scraper": "git+https://git@github.com:facundoolano/app-store-scraper.git",
+    "google-play-scraper": "git+https://github.com/JiantaoFu/google-play-scraper.git",
+    "punycode": "^2.3.1"
   },
   "devDependencies": {
-    "ts-node": "^10.9.2",
     "chai": "^5.2.0",
     "mocha": "^11.1.0"
   },

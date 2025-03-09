@@ -74,6 +74,59 @@ The server exposes tools that can be used through any MCP client. For example, u
 }
 ```
 
+## Test with MCP Inspector
+
+```
+npm run test:inspector
+```
+
+![MCP Inspector](inspector.png)
+
+## Usage with Claude Desktop
+Add this to your `claude_desktop_config.json`:
+
+### Docker
+
+```json
+{
+  "mcpServers": {
+    "app-insight-mcp": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "app-insight-mcp"
+      ]
+    }
+  }
+}
+```
+
+### NPX
+
+```json
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@jeromyfu/app-insight-mcp"
+      ]
+    }
+  }
+}
+```
+
+## Build
+
+Docker build:
+
+```bash
+docker build -t app-insight-mcp -f Dockerfile .
+```
+
 ## Error Handling
 
 All tools include error handling and will return appropriate error messages if:
