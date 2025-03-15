@@ -1,5 +1,7 @@
 # App Market Intelligence MCP
 
+[![smithery badge](https://smithery.ai/badge/@JiantaoFu/appinsightmcp)](https://smithery.ai/server/@JiantaoFu/appinsightmcp)
+
 An MCP server that provides comprehensive market intelligence by analyzing data from both the Apple App Store and Google Play Store. Get insights about apps, market trends, competitors, and user feedback across the major mobile app marketplaces.
 
 ## API Coverage
@@ -84,6 +86,14 @@ npm run test:inspector
 
 ## Usage with Claude Desktop
 Add this to your `claude_desktop_config.json`:
+
+### Installing via Smithery
+
+To install App Market Intelligence for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@JiantaoFu/appinsightmcp):
+
+```bash
+npx -y @smithery/cli install @JiantaoFu/appinsightmcp --client claude
+```
 
 ### Docker
 
