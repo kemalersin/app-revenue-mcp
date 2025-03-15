@@ -1,6 +1,6 @@
 {
   "name": "@jeromyfu/app-insight-mcp",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "MCP server for gathering market intelligence from mobile app stores (Apple App Store & Google Play)",
   "type": "module",
   "main": "src/server.js",
@@ -29,8 +29,8 @@
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.6.1",
-    "app-store-scraper": "git+https://git@github.com:facundoolano/app-store-scraper.git",
-    "google-play-scraper": "git+https://github.com/JiantaoFu/google-play-scraper.git",
+    "@jeromyfu/app-store-scraper": "^0.18.0",
+    "@jeromyfu/google-play-scraper": "^10.0.1",
     "punycode": "^2.3.1"
   },
   "devDependencies": {

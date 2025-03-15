@@ -26,8 +26,8 @@
 
 import { McpServer, ResourceTemplate } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import store from 'app-store-scraper';
-import gplay from 'google-play-scraper';
+import store from '@jeromyfu/app-store-scraper';
+import gplay from '@jeromyfu/google-play-scraper';
 import { z } from 'zod';
 
 const server = new McpServer({
