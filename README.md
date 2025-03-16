@@ -118,7 +118,7 @@ npx -y @smithery/cli install @JiantaoFu/appinsightmcp --client claude
 ```json
 {
   "mcpServers": {
-    "filesystem": {
+    "app-insight-mcp": {
       "command": "npx",
       "args": [
         "-y",
