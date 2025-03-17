@@ -84,6 +84,12 @@ npm run test:inspector
 
 ![MCP Inspector](inspector.png)
 
+## Test with mcp-cli
+
+```
+npx @wong2/mcp-cli npx -y "app-insight-mcp"
+```
+
 ## Usage with Claude Desktop
 Add this to your `claude_desktop_config.json`:
 
