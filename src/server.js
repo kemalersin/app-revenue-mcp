@@ -37,41 +37,108 @@ const server = new McpServer({
 
 // App Store Tools
 server.tool("app-store-search", 
-  "Search for apps on the App Store",
+  "Search for apps on the App Store. Returns a list of apps with the following fields:\n" +
+  "- id: App Store ID number\n" +
+  "- appId: Bundle ID (e.g. 'com.company.app')\n" +
+  "- title: App name\n" +
+  "- icon: Icon image URL\n" +
+  "- url: App Store URL\n" +
+  "- price: Price in USD\n" +
+  "- currency: Price currency code\n" +
+  "- free: Boolean indicating if app is free\n" +
+  "- description: App description\n" +
+  "- developer: Developer name\n" +
+  "- developerUrl: Developer's App Store URL\n" +
+  "- developerId: Developer's ID\n" +
+  "- genre: App category name\n" +
+  "- genreId: Category ID\n" +
+  "- released: Release date (ISO string)",
   {
-    term: z.string().describe("Search term"),
-    country: z.string().default("us").describe("Country code (default: us)"),
-    num: z.number().default(50).describe("Number of results (default: 50)")
+    term: z.string().describe("Search term (required)"),
+    num: z.number().default(50).describe("Number of results to retrieve (default: 50)"),
+    page: z.number().default(1).describe("Page of results to retrieve (default: 1)"),
+    country: z.string().default("us").describe("Two letter country code (default: us)"),
+    lang: z.string().default("en-us").describe("Language code for result text (default: en-us)"),
+    idsOnly: z.boolean().default(false).describe("Skip extra lookup request. Returns array of application IDs only (default: false)")
   }, 
-  async ({ term, country, num }) => {
-    const results = await store.search({ term, country, num });
+  async ({ term, num, page, country, lang, idsOnly }) => {
+    const results = await store.search({ term, num, page, country, lang, idsOnly });
     return { content: [{ type: "text", text: JSON.stringify(results) }] };
   }
 );
 
 server.tool("app-store-details", 
-  "Get detailed information about an App Store app",
+  "Get detailed information about an App Store app. Returns an object with:\n" +
+  "- id: App Store ID number\n" +
+  "- appId: Bundle ID (e.g. 'com.company.app')\n" +
+  "- title: App name\n" +
+  "- url: App Store URL\n" +
+  "- description: Full app description\n" +
+  "- icon: Icon URL\n" +
+  "- genres: Array of category names\n" +
+  "- genreIds: Array of category IDs\n" +
+  "- primaryGenre: Main category name\n" +
+  "- primaryGenreId: Main category ID\n" +
+  "- contentRating: Content rating (e.g. '4+')\n" +
+  "- languages: Array of language codes\n" +
+  "- size: App size in bytes\n" +
+  "- requiredOsVersion: Minimum iOS version required\n" +
+  "- released: Initial release date (ISO string)\n" +
+  "- updated: Last update date (ISO string)\n" +
+  "- releaseNotes: Latest version changes\n" +
+  "- version: Current version string\n" +
+  "- price: Price in USD\n" +
+  "- currency: Price currency code\n" +
+  "- free: Boolean indicating if app is free\n" +
+  "- developerId: Developer's ID\n" +
+  "- developer: Developer name\n" +
+  "- developerUrl: Developer's App Store URL\n" +
+  "- developerWebsite: Developer's website URL if available\n" +
+  "- score: Current rating (0-5)\n" +
+  "- reviews: Total number of ratings\n" +
+  "- currentVersionScore: Current version rating (0-5)\n" +
+  "- currentVersionReviews: Current version review count\n" +
+  "- screenshots: Array of screenshot URLs\n" +
+  "- ipadScreenshots: Array of iPad screenshot URLs\n" +
+  "- appletvScreenshots: Array of Apple TV screenshot URLs\n" +
+  "- supportedDevices: Array of supported device IDs\n" +
+  "- ratings: Total number of ratings (when ratings option enabled)\n" +
+  "- histogram: Rating distribution by star level (when ratings option enabled)",
   {
-    id: z.number().describe("Numeric App ID (e.g., 444934666)"),
-    country: z.string().default("us").describe("Country code (default: us)")
-  }, 
-  async ({ id, country }) => {
-    const details = await store.app({ id, country });
+    id: z.number().optional().describe("Numeric App ID (e.g., 553834731). Either this or appId must be provided."),
+    appId: z.string().optional().describe("Bundle ID (e.g., 'com.midasplayer.apps.candycrushsaga'). Either this or id must be provided."), 
+    country: z.string().default("us").describe("Country code to get app details from (default: us). Also affects data language."),
+    lang: z.string().optional().describe("Language code for result text. If not provided, uses country-specific language."),
+    ratings: z.boolean().optional().default(false).describe("Load additional ratings information like ratings count and histogram")
+  },
+  async ({ id, appId, country, lang, ratings }) => {
+    const details = await store.app({ id, appId, country, lang, ratings });
     return { content: [{ type: "text", text: JSON.stringify(details) }] };
   }
 );
 
 server.tool("app-store-reviews", 
-  "Get reviews for an App Store app",
+  "Get reviews for an App Store app. Returns an array of reviews with:\n" +
+  "- id: Review ID\n" +
+  "- userName: Reviewer's name\n" +
+  "- userUrl: Reviewer's profile URL\n" +
+  "- version: App version reviewed\n" +
+  "- score: Rating (1-5)\n" +
+  "- title: Review title\n" +
+  "- text: Review content\n" +
+  "- url: Review URL\n" +
+  "- updated: Review date (ISO string)",
   {
-    id: z.number().describe("Numeric App ID (e.g., 444934666)"),
-    country: z.string().default("us").describe("Country code (default: us)"),
-    page: z.number().default(1).describe("Page number (default: 1)"),
+    id: z.number().optional().describe("Numeric App ID (e.g., 553834731). Either this or appId must be provided."),
+    appId: z.string().optional().describe("Bundle ID (e.g., 'com.midasplayer.apps.candycrushsaga'). Either this or id must be provided."),
+    country: z.string().default("us").describe("Country code to get reviews from (default: us)"),
+    page: z.number().min(1).max(10).default(1).describe("Page number to retrieve (default: 1, max: 10)"),
     sort: z.enum(["recent", "helpful"]).default("recent").describe("Sort order (recent or helpful)")
   }, 
-  async ({ id, country, page, sort }) => {
+  async ({ id, appId, country, page, sort }) => {
     const reviews = await store.reviews({
       id,
+      appId, 
       country,
       page,
       sort: sort === "helpful" ? store.sort.HELPFUL : store.sort.RECENT
@@ -81,55 +148,95 @@ server.tool("app-store-reviews",
 );
 
 server.tool("app-store-similar", 
-  "Get similar apps from the App Store",
+  "Get similar apps ('customers also bought') from the App Store. Returns a list of apps with:\n" +
+  "- id: App Store ID number\n" +
+  "- appId: Bundle ID (e.g. 'com.company.app')\n" +
+  "- title: App name\n" + 
+  "- icon: Icon image URL\n" +
+  "- url: App Store URL\n" +
+  "- price: Price in USD\n" +
+  "- currency: Price currency code\n" +
+  "- free: Boolean indicating if app is free\n" +
+  "- description: App description\n" +
+  "- developer: Developer name\n" +
+  "- developerUrl: Developer's App Store URL\n" +
+  "- developerId: Developer's ID\n" +
+  "- genre: App category name\n" +
+  "- genreId: Category ID\n" +
+  "- released: Release date (ISO string)",
   {
-    id: z.number().describe("Numeric App ID (e.g., 444934666)")
+    id: z.number().optional().describe("Numeric App ID (e.g., 553834731). Either this or appId must be provided."),
+    appId: z.string().optional().describe("Bundle ID (e.g., 'com.midasplayer.apps.candycrushsaga'). Either this or id must be provided.")
   }, 
-  async ({ id }) => {
-    const similar = await store.similar({ id });
+  async ({ id, appId }) => {
+    const similar = await store.similar({ id, appId });
     return { content: [{ type: "text", text: JSON.stringify(similar) }] };
   }
 );
 
 // Additional App Store Tools
 server.tool("app-store-developer", 
-  "Get apps by a developer on the App Store",
+  "Get apps by a developer on the App Store. Returns a list of apps with:\n" +
+  "- id: App Store ID number\n" +
+  "- appId: Bundle ID (e.g. 'com.company.app')\n" +
+  "- title: App name\n" + 
+  "- icon: Icon image URL\n" +
+  "- url: App Store URL\n" +
+  "- price: Price in USD\n" +
+  "- currency: Price currency code\n" +
+  "- free: Boolean indicating if app is free\n" +
+  "- description: App description\n" +
+  "- developer: Developer name\n" +
+  "- developerUrl: Developer's App Store URL\n" +
+  "- developerId: Developer's ID\n" +
+  "- genre: App category name\n" +
+  "- genreId: Category ID\n" +
+  "- released: Release date (ISO string)",
   {
-    devId: z.string().describe("Developer ID"),
-    country: z.string().default("us").describe("Country code (default: us)")
+    devId: z.string().describe("iTunes artist ID of the developer (e.g., 284882218 for Facebook)"),
+    country: z.string().default("us").describe("Country code to get app details from (default: us). Also affects data language."),
+    lang: z.string().optional().describe("Language code for result text. If not provided, uses country-specific language.")
   }, 
-  async ({ devId, country }) => {
-    const apps = await store.developer({ devId, country });
+  async ({ devId, country, lang }) => {
+    const apps = await store.developer({ devId, country, lang });
     return { content: [{ type: "text", text: JSON.stringify(apps) }] };
   }
 );
 
 server.tool("app-store-suggest", 
-  "Get search suggestions from App Store",
+  "Get search suggestions from the App Store. Returns an array of objects with:\n" +
+  "- term: Suggested search term\n" +
+  "Each suggestion has a priority from 0 (low traffic) to 10000 (most searched)",
   {
-    term: z.string().describe("Search term"),
-    country: z.string().default("us").describe("Country code (default: us)")
+    term: z.string().describe("Search term to get suggestions for")
   }, 
   async ({ term, country }) => {
-    const suggestions = await store.suggest({ term, country });
+    const suggestions = await store.suggest({ term });
     return { content: [{ type: "text", text: JSON.stringify(suggestions) }] };
   }
 );
 
 server.tool("app-store-ratings", 
-  "Get ratings for an App Store app",
+  "Get ratings for an App Store app. Returns an object with:\n" +
+  "- ratings: Total number of ratings\n" +
+  "- histogram: Distribution of ratings by star level (1-5)",
   {
-    id: z.number().describe("Numeric App ID (e.g., 444934666)"),
-    country: z.string().default("us").describe("Country code (default: us)")
+    id: z.number().optional().describe("Numeric App ID (e.g., 553834731). Either this or appId must be provided."),
+    appId: z.string().optional().describe("Bundle ID (e.g., 'com.midasplayer.apps.candycrushsaga'). Either this or id must be provided."),
+    country: z.string().default("us").describe("Country code to get ratings from (default: us)")
   }, 
-  async ({ id, country }) => {
-    const ratings = await store.ratings({ id, country });
+  async ({ id, appId, country }) => {
+    const ratings = await store.ratings({ id, appId, country });
     return { content: [{ type: "text", text: JSON.stringify(ratings) }] };
   }
 );
 
 server.tool("app-store-version-history", 
-  "Get version history for an App Store app",
+  "Get version history for an App Store app. Returns an array of versions with:\n" +
+  "- versionDisplay: Version number string\n" +
+  "- releaseNotes: Update description\n" +
+  "- releaseDate: Release date (YYYY-MM-DD)\n" +
+  "- releaseTimestamp: Release date and time (ISO string)",
   {
     id: z.number().describe("Numeric App ID (e.g., 444934666)")
   }, 
@@ -140,17 +247,44 @@ server.tool("app-store-version-history",
 );
 
 server.tool("app-store-privacy", 
-  "Get privacy details for an App Store app",
+  "Get privacy details for an App Store app. Returns an object with:\n" +
+  "- managePrivacyChoicesUrl: URL to manage privacy choices (if available)\n" +
+  "- privacyTypes: Array of privacy data types, each containing:\n" +
+  "  - privacyType: Name of the privacy category\n" +
+  "  - identifier: Unique identifier for the privacy type\n" +
+  "  - description: Detailed description of how data is used\n" +
+  "  - dataCategories: Array of data categories, each containing:\n" +
+  "    - dataCategory: Category name\n" +
+  "    - identifier: Category identifier\n" +
+  "    - dataTypes: Array of specific data types collected\n" +
+  "  - purposes: Array of purposes for data collection\n" +
+  "Note: Currently only available for US App Store.",
   {
-    id: z.number().describe("Numeric App ID (e.g., 444934666)")
-  }, 
+    id: z.number().describe("Numeric App ID (e.g., 553834731)")
+  },
   async ({ id }) => {
     const privacy = await store.privacy({ id });
     return { content: [{ type: "text", text: JSON.stringify(privacy) }] };
   }
 );
+
 server.tool("app-store-list", 
-  "Get apps from iTunes collections",
+  "Get apps from iTunes collections. Returns a list of apps with:\n" +
+  "- id: App Store ID number\n" +
+  "- appId: Bundle ID (e.g. 'com.company.app')\n" +
+  "- title: App name\n" +
+  "- icon: Icon image URL\n" +
+  "- url: App Store URL\n" +
+  "- price: Price in USD\n" +
+  "- currency: Price currency code\n" +
+  "- free: Boolean indicating if app is free\n" +
+  "- description: App description\n" +
+  "- developer: Developer name\n" +
+  "- developerUrl: Developer's App Store URL\n" +
+  "- developerId: Developer's ID\n" +
+  "- genre: App category name\n" +
+  "- genreId: Category ID\n" +
+  "- released: Release date (ISO string)",
   {
     collection: z.enum([
       'newapplications',
@@ -250,113 +384,256 @@ server.tool("app-store-list",
       "- 13029: TRAVEL\n" +
       "- 13030: WOMEN"
     ),
+    lang: z.string().optional().describe("Language code for result text. If not provided, uses country-specific language."),
+    fullDetail: z.boolean().default(false).describe("Get full app details including ratings, reviews etc (default: false)"),
     country: z.string().default("us").describe("Country code (default: us)"),
     num: z.number().max(200).default(50).describe("Number of results (default: 50, max: 200)")
   }, 
-  async ({ collection, category, country, num }) => {
-    const results = await store.list({ collection, category, country, num });
+  async ({ collection, category, country, num, lang, fullDetail }) => {
+    const results = await store.list({ collection, category, country, num, lang, fullDetail });
     return { content: [{ type: "text", text: JSON.stringify(results) }] };
   }
 );
 
 // Google Play Tools
 server.tool("google-play-search", 
-  "Search for apps on Google Play",
+  "Search for apps on Google Play. Returns a list of apps with:\n" +
+  "- title: App name\n" +
+  "- appId: Package name (e.g. 'com.company.app')\n" +
+  "- url: Play Store URL\n" +
+  "- icon: Icon image URL\n" +
+  "- developer: Developer name\n" +
+  "- developerId: Developer ID\n" +
+  "- priceText: Price display text\n" +
+  "- free: Boolean indicating if app is free\n" +
+  "- summary: Short description\n" +
+  "- scoreText: Rating display text\n" +
+  "- score: Rating (0-5)",
   {
-    term: z.string().describe("Search term"),
-    country: z.string().default("us").describe("Country code (default: us)"),
-    num: z.number().default(20).describe("Number of results (default: 20)"),
-    fullDetail: z.boolean().default(false).describe("Fetch full details (default: false)")
+    term: z.string().describe("Search term to query apps"),
+    price: z.enum(["all", "free", "paid"]).default("all").describe("Filter by price: all, free, or paid (default: all)"),
+    num: z.number().default(20).describe("Number of results to retrieve (default: 20, max: 250)"),
+    lang: z.string().default("en").describe("Language code for result text (default: en)"), 
+    country: z.string().default("us").describe("Country code to get results from (default: us)"),
+    fullDetail: z.boolean().default(false).describe("Include full app details in results (default: false)")
   }, 
-  async ({ term, country, num, fullDetail }) => {
-    const results = await gplay.search({ term, country, num, fullDetail });
+  async ({ term, price, num, lang, country, fullDetail }) => {
+    const results = await gplay.search({ term, price, num, lang, country, fullDetail });
     return { content: [{ type: "text", text: JSON.stringify(results) }] };
   }
 );
 
 server.tool("google-play-details", 
-  "Get detailed information about a Google Play app",
+  "Get detailed information about a Google Play app. Returns an object with:\n" +
+  "- title: App name\n" +
+  "- description: Full app description\n" +
+  "- descriptionHTML: Description with HTML formatting\n" +
+  "- summary: Short description\n" +
+  "- installs: Install count range\n" +
+  "- minInstalls: Minimum install count\n" +
+  "- maxInstalls: Maximum install count\n" +
+  "- score: Average rating (0-5)\n" +
+  "- scoreText: Rating display text\n" +
+  "- ratings: Total number of ratings\n" +
+  "- reviews: Total number of reviews\n" +
+  "- histogram: Rating distribution by star level\n" +
+  "- price: Price in local currency\n" +
+  "- free: Boolean indicating if app is free\n" +
+  "- currency: Price currency code\n" +
+  "- priceText: Formatted price string\n" +
+  "- offersIAP: Boolean indicating in-app purchases\n" +
+  "- IAPRange: Price range for in-app purchases\n" +
+  "- androidVersion: Minimum Android version required\n" +
+  "- androidVersionText: Formatted Android version text\n" +
+  "- developer: Developer name\n" +
+  "- developerId: Developer ID\n" +
+  "- developerEmail: Developer contact email\n" +
+  "- developerWebsite: Developer website URL\n" +
+  "- developerAddress: Developer physical address\n" +
+  "- genre: App category\n" +
+  "- genreId: Category ID\n" +
+  "- icon: Icon URL\n" +
+  "- headerImage: Feature graphic URL\n" +
+  "- screenshots: Array of screenshot URLs\n" +
+  "- contentRating: Content rating (e.g. 'Everyone')\n" +
+  "- contentRatingDescription: Content rating details\n" +
+  "- adSupported: Boolean indicating if app shows ads\n" +
+  "- released: Release date\n" +
+  "- updated: Last update date\n" +
+  "- version: Current version string\n" +
+  "- recentChanges: Latest version changes\n" +
+  "- preregister: Boolean indicating if app is in pre-registration\n" +
+  "- editorsChoice: Boolean indicating Editor's Choice status\n" +
+  "- features: Array of special features",
   {
-    appId: z.string().describe("App ID"),
-    country: z.string().default("us").describe("Country code (default: us)")
+    appId: z.string().describe("Google Play package name (e.g., 'com.google.android.apps.translate')"),
+    lang: z.string().default("en").describe("Language code for result text (default: en)"),
+    country: z.string().default("us").describe("Country code to check app availability (default: us)")
   }, 
-  async ({ appId, country }) => {
-    const details = await gplay.app({ appId, country });
+  async ({ appId, lang, country }) => {
+    const details = await gplay.app({ appId, lang, country });
     return { content: [{ type: "text", text: JSON.stringify(details) }] };
   }
 );
 
 server.tool("google-play-reviews", 
-  "Get reviews for a Google Play app",
+  "Get reviews for a Google Play app. Returns an array of reviews with:\n" +
+  "- id: Review ID string\n" +
+  "- userName: Reviewer's name\n" +
+  "- userImage: Reviewer's profile image URL\n" +
+  "- date: Review date (ISO string)\n" +
+  "- score: Rating (1-5)\n" +
+  "- scoreText: Rating display text\n" +
+  "- title: Review title\n" +
+  "- text: Review content\n" +
+  "- url: Review URL\n" +
+  "- version: App version reviewed\n" +
+  "- thumbsUp: Number of thumbs up votes\n" +
+  "- replyDate: Developer reply date (if any)\n" +
+  "- replyText: Developer reply content (if any)\n" +
+  "- criterias: Array of rating criteria (if any)\n" +
+  "\nNote: Reviews are returned in the specified language. The total review count\n" +
+  "shown in Google Play refers to ratings, not written reviews.",
   {
-    appId: z.string().describe("App ID"),
+    appId: z.string().describe("Package name of the app (e.g., 'com.mojang.minecraftpe')"),
+    lang: z.string().default("en").describe("Language code for reviews (default: en)"),
     country: z.string().default("us").describe("Country code (default: us)"),
-    num: z.number().default(100).describe("Number of reviews (default: 100)")
+    sort: z.enum(["newest", "rating", "helpfulness"]).default("newest")
+      .describe("Sort order: newest, rating, or helpfulness (default: newest)"),
+    num: z.number().default(100).describe("Number of reviews to retrieve (default: 100). Ignored if paginate is true."),
+    paginate: z.boolean().default(false).describe("Enable pagination with 150 reviews per page"),
+    nextPaginationToken: z.string().optional().describe("Token for fetching next page of reviews")
   }, 
-  async ({ appId, country, num }) => {
-    const reviews = await gplay.reviews({ appId, country, num, sort: gplay.sort.NEWEST });
-    return { content: [{ type: "text", text: JSON.stringify(reviews.data) }] };
+  async ({ appId, lang, country, sort, num, paginate, nextPaginationToken }) => {
+    const sortMap = {
+      newest: gplay.sort.NEWEST,
+      rating: gplay.sort.RATING,
+      helpfulness: gplay.sort.HELPFULNESS
+    };
+
+    const reviews = await gplay.reviews({
+      appId,
+      lang,
+      country,
+      sort: sortMap[sort],
+      num,
+      paginate,
+      nextPaginationToken
+    });
+
+    return {
+      content: [{
+        type: "text",
+        text: JSON.stringify({
+          reviews: reviews.data,
+          nextPage: reviews.nextPaginationToken
+        })
+      }] 
+    };
   }
 );
 
 server.tool("google-play-similar", 
-  "Get similar apps from Google Play",
+  "Get similar apps from Google Play. Returns a list of apps with:\n" +
+  "- url: Play Store URL\n" +
+  "- appId: Package name (e.g. 'com.company.app')\n" +
+  "- summary: Short description\n" +
+  "- developer: Developer name\n" +
+  "- developerId: Developer ID\n" +
+  "- icon: Icon image URL\n" +
+  "- score: Rating (0-5)\n" +
+  "- scoreText: Rating display text\n" +
+  "- priceText: Price display text\n" +
+  "- free: Boolean indicating if app is free\n",
   {
-    appId: z.string().describe("App ID"),
-    country: z.string().default("us").describe("Country code (default: us)")
+    appId: z.string().describe("Google Play package name (e.g., 'com.dxco.pandavszombies')"),
+    lang: z.string().default("en").describe("Language code for result text (default: en)"),
+    country: z.string().default("us").describe("Country code to get results from (default: us)"),
+    fullDetail: z.boolean().default(false).describe("Include full app details in results (default: false), If fullDetail is true, includes all fields from app details endpoint.")
   }, 
-  async ({ appId, country }) => {
-    const similar = await gplay.similar({ appId, country });
+  async ({ appId, lang, country, fullDetail }) => {
+    const similar = await gplay.similar({ appId, lang, country, fullDetail });
     return { content: [{ type: "text", text: JSON.stringify(similar) }] };
   }
 );
 
 // Additional Google Play Tools
 server.tool("google-play-developer", 
-  "Get apps by a developer on Google Play",
+  "Get apps by a developer on Google Play. Returns a list of apps with:\n" +
+  "- url: Play Store URL\n" +
+  "- appId: Package name (e.g. 'com.company.app')\n" +
+  "- title: App name\n" +
+  "- summary: Short app description\n" +
+  "- developer: Developer name\n" +
+  "- developerId: Developer ID\n" +
+  "- icon: Icon image URL\n" +
+  "- score: Rating (0-5)\n" +
+  "- scoreText: Rating display text\n" +
+  "- priceText: Price display text\n" +
+  "- free: Boolean indicating if app is free\n",
   {
-    devId: z.string().describe("Developer ID"),
-    lang: z.string().default("en").describe("Language code (default: en)"),
-    country: z.string().default("us").describe("Country code (default: us)"),
-    num: z.number().default(60).describe("Number of results (default: 60)")
+    devId: z.string().describe("Developer name (e.g., 'DxCo Games')"),
+    lang: z.string().default("en").describe("Language code for result text (default: en)"),
+    country: z.string().default("us").describe("Country code to get results from (default: us)"),
+    num: z.number().default(60).describe("Number of results to retrieve (default: 60)"),
+    fullDetail: z.boolean().default(false).describe("Include full app details in results (default: false), If fullDetail is true, includes all fields from app details endpoint.")
   }, 
-  async ({ devId, lang, country, num }) => {
-    const apps = await gplay.developer({ devId, lang, country, num });
+  async ({ devId, lang, country, num, fullDetail }) => {
+    const apps = await gplay.developer({ devId, lang, country, num, fullDetail });
     return { content: [{ type: "text", text: JSON.stringify(apps) }] };
   }
 );
 
 server.tool("google-play-suggest", 
-  "Get search suggestions from Google Play",
+  "Get search suggestions from Google Play. Returns an array of suggested search terms (up to 5).\n" +
+  "Sample response: ['panda pop', 'panda', 'panda games', 'panda run', 'panda pop for free']",
   {
-    term: z.string().describe("Search term"),
-    lang: z.string().default("en").describe("Language code (default: en)"),
-    country: z.string().default("us").describe("Country code (default: us)")
+    term: z.string().describe("Search term to get suggestions for (e.g., 'panda')"),
+    lang: z.string().default("en").describe("Language code for suggestions (default: en)"),
+    country: z.string().default("us").describe("Country code to get suggestions from (default: us)")
   }, 
   async ({ term, lang, country }) => {
     const suggestions = await gplay.suggest({ term, lang, country });
+    // API returns array of strings directly
     return { content: [{ type: "text", text: JSON.stringify(suggestions) }] };
   }
 );
 
 server.tool("google-play-permissions", 
-  "Get permissions required by a Google Play app",
+  "Get permissions required by a Google Play app. Returns a list of permissions with:\n" +
+  "- permission: Description of the permission (e.g., 'modify storage contents')\n" +
+  "- type: Permission category (e.g., 'Storage', 'Network')\n\n" +
+  "When short=true, returns just an array of permission strings.\n" +
+  "Note: Permissions are returned in the specified language.",
   {
-    appId: z.string().describe("App ID"),
-    lang: z.string().default("en").describe("Language code (default: en)"),
-    short: z.boolean().default(false).describe("Short format (default: false)")
+    appId: z.string().describe("Google Play package name (e.g., 'com.dxco.pandavszombies')"),
+    lang: z.string().default("en").describe("Language code for permission text (default: en)"),
+    country: z.string().default("us").describe("Country code to check app (default: us)"),
+    short: z.boolean().default(false).describe("Return only permission names without categories (default: false)")
   }, 
-  async ({ appId, lang, short }) => {
-    const permissions = await gplay.permissions({ appId, lang, short });
+  async ({ appId, lang, country, short }) => {
+    const permissions = await gplay.permissions({ appId, lang, country, short });
     return { content: [{ type: "text", text: JSON.stringify(permissions) }] };
   }
 );
 
 server.tool("google-play-datasafety", 
-  "Get data safety information for a Google Play app",
+  "Get data safety information for a Google Play app. Returns an object with:\n" +
+  "- dataShared: Array of shared data items, each containing:\n" +
+  "  - data: Name of the data being shared (e.g., 'User IDs')\n" +
+  "  - optional: Boolean indicating if sharing is optional\n" +
+  "  - purpose: Comma-separated list of purposes (e.g., 'Analytics, Marketing')\n" +
+  "  - type: Category of data (e.g., 'Personal info')\n" +
+  "- dataCollected: Array of collected data items with same structure as dataShared\n" +
+  "- securityPractices: Array of security practices, each containing:\n" +
+  "  - practice: Name of the security practice\n" +
+  "  - description: Detailed description of the practice\n" +
+  "- privacyPolicyUrl: URL to the app's privacy policy\n\n" +
+  "Data types can include: Personal info, Financial info, Messages, Contacts,\n" +
+  "App activity, App info and performance, Device or other IDs",
   {
-    appId: z.string().describe("App ID"),
-    lang: z.string().default("en").describe("Language code (default: en)")
+    appId: z.string().describe("Google Play package name (e.g., 'com.dxco.pandavszombies')"),
+    lang: z.string().default("en").describe("Language code for data safety info (default: en)")
   }, 
   async ({ appId, lang }) => {
     const datasafety = await gplay.datasafety({ appId, lang });
@@ -365,8 +642,16 @@ server.tool("google-play-datasafety",
 );
 
 server.tool("google-play-categories", 
-  "Get list of Google Play app categories",
-  {}, 
+  "Get list of all Google Play categories. Returns an array of category identifiers like:\n" +
+  "- 'APPLICATION': All applications\n" +
+  "- 'GAME': All games\n" +
+  "- 'ANDROID_WEAR': Wear OS apps\n" +
+  "- 'SOCIAL': Social apps\n" +
+  "- 'PRODUCTIVITY': Productivity apps\n" +
+  "etc.\n\n" +
+  "These category IDs can be used with the google-play-list tool to filter apps by category.\n" +
+  "Sample response: ['AUTO_AND_VEHICLES', 'LIBRARIES_AND_DEMO', 'LIFESTYLE', ...]",
+  {}, // No parameters needed
   async () => {
     const categories = await gplay.categories();
     return { content: [{ type: "text", text: JSON.stringify(categories) }] };
@@ -374,14 +659,30 @@ server.tool("google-play-categories",
 );
 
 server.tool("google-play-list", 
-  "Get apps from Google Play collections",
+  "Get apps from Google Play collections. Returns a list of apps with:\n" +
+  "- url: Play Store URL\n" +
+  "- appId: Package name (e.g., 'com.company.app')\n" +
+  "- title: App name\n" +
+  "- summary: Short description\n" +
+  "- developer: Developer name\n" +
+  "- developerId: Developer ID\n" +
+  "- icon: Icon URL\n" +
+  "- score: Rating (0-5)\n" +
+  "- scoreText: Rating display text\n" +
+  "- priceText: Price display text\n" +
+  "- free: Boolean indicating if app is free\n\n" +
+  "When fullDetail is true, includes all fields from app details endpoint.",
   {
-    collection: z.enum(['TOP_FREE', 'TOP_PAID', 'GROSSING'])
+    collection: z.enum(['TOP_FREE', 'TOP_PAID', 'GROSSING', 'TOP_FREE_GAMES', 'TOP_PAID_GAMES', 'TOP_GROSSING_GAMES'])
+      .default('TOP_FREE')
       .describe(
-        "Collection to fetch from. Available collections:\n" +
+        "Collection to fetch apps from (default: TOP_FREE). Available collections:\n" +
         "- TOP_FREE: Top free applications\n" +
         "- TOP_PAID: Top paid applications\n" +
-        "- GROSSING: Top grossing applications"
+        "- GROSSING: Top grossing applications\n" +
+        "- TOP_FREE_GAMES: Top free games\n" +
+        "- TOP_PAID_GAMES: Top paid games\n" +
+        "- TOP_GROSSING_GAMES: Top grossing games"
       ),
     category: z.enum([
       'APPLICATION',
@@ -496,11 +797,32 @@ server.tool("google-play-list",
       "- GAME_WORD: Word Games\n" +
       "- FAMILY: Family Games"
     ),
-    country: z.string().default("us").describe("Country code (default: us)"),
-    num: z.number().default(50).describe("Number of results (default: 50)")
+    age: z.enum(['FIVE_UNDER', 'SIX_EIGHT', 'NINE_UP'])
+      .optional()
+      .describe("Age range filter (only for FAMILY category). Options: FIVE_UNDER, SIX_EIGHT, NINE_UP"),
+    num: z.number()
+      .default(500)
+      .describe("Number of apps to retrieve (default: 500)"),
+    lang: z.string()
+      .default("en")
+      .describe("Language code for result text (default: en)"),
+    country: z.string()
+      .default("us")
+      .describe("Country code to get results from (default: us)"),
+    fullDetail: z.boolean()
+      .default(false)
+      .describe("Include full app details in results (default: false)")
   }, 
-  async ({ collection, category, country, num }) => {
-    const results = await gplay.list({ collection, category, country, num });
+  async ({ collection, category, age, num, lang, country, fullDetail }) => {
+    const results = await gplay.list({
+      collection,
+      category,
+      age,
+      num,
+      lang,
+      country,
+      fullDetail
+    });
     return { content: [{ type: "text", text: JSON.stringify(results) }] };
   }
 );

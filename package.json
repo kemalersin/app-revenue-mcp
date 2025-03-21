@@ -1,6 +1,6 @@
 {
   "name": "@jeromyfu/app-insight-mcp",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "MCP server for gathering market intelligence from mobile app stores (Apple App Store & Google Play)",
   "type": "module",
   "main": "src/server.js",
