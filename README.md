@@ -60,7 +60,7 @@ The server exposes tools that can be used through any MCP client. For example, u
 {
   "name": "app-store-list",
   "params": {
-    "collection": "TOP_FREE_IOS",
+    "collection": "topfreeapplications",
     "num": 10
   }
 }

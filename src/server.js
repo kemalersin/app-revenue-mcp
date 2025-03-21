@@ -149,12 +149,107 @@ server.tool("app-store-privacy",
     return { content: [{ type: "text", text: JSON.stringify(privacy) }] };
   }
 );
-
 server.tool("app-store-list", 
   "Get apps from iTunes collections",
   {
-    collection: z.string().describe("Collection to fetch from (e.g. TOP_FREE_IOS, TOP_PAID_IOS, etc)"),
-    category: z.string().optional().describe("Category ID to filter by"),
+    collection: z.enum([
+      'newapplications',
+      'newfreeapplications',
+      'newpaidapplications',
+      'topfreeapplications',
+      'topfreeipadapplications',
+      'topgrossingapplications',
+      'topgrossingipadapplications',
+      'toppaidapplications',
+      'toppaidipadapplications'
+    ]).describe(
+      "Collection to fetch from. Available collections:\n" +
+      "- newapplications: New iOS applications\n" +
+      "- newfreeapplications: New free iOS applications\n" +
+      "- newpaidapplications: New paid iOS applications\n" +
+      "- topfreeapplications: Top free iOS applications\n" +
+      "- topfreeipadapplications: Top free iPad applications\n" +
+      "- topgrossingapplications: Top grossing iOS applications\n" +
+      "- topgrossingipadapplications: Top grossing iPad applications\n" +
+      "- toppaidapplications: Top paid iOS applications\n" +
+      "- toppaidipadapplications: Top paid iPad applications"
+    ),
+    category: z.number().optional().describe(
+      "Category ID to filter by. Available categories:\n" +
+      "Main Categories:\n" +
+      "- 6000: BUSINESS\n" +
+      "- 6001: WEATHER\n" +
+      "- 6002: UTILITIES\n" +
+      "- 6003: TRAVEL\n" +
+      "- 6004: SPORTS\n" +
+      "- 6005: SOCIAL_NETWORKING\n" +
+      "- 6006: REFERENCE\n" +
+      "- 6007: PRODUCTIVITY\n" +
+      "- 6008: PHOTO_AND_VIDEO\n" +
+      "- 6009: NEWS\n" +
+      "- 6010: NAVIGATION\n" +
+      "- 6011: MUSIC\n" +
+      "- 6012: LIFESTYLE\n" +
+      "- 6013: HEALTH_AND_FITNESS\n" +
+      "- 6014: GAMES\n" +
+      "- 6015: FINANCE\n" +
+      "- 6016: ENTERTAINMENT\n" +
+      "- 6017: EDUCATION\n" +
+      "- 6018: BOOKS\n" +
+      "- 6020: MEDICAL\n" +
+      "- 6021: MAGAZINES_AND_NEWSPAPERS\n" +
+      "- 6022: CATALOGS\n" +
+      "- 6023: FOOD_AND_DRINK\n" +
+      "- 6024: SHOPPING\n\n" +
+      "Games Subcategories:\n" +
+      "- 7001: ACTION\n" +
+      "- 7002: ADVENTURE\n" +
+      "- 7003: ARCADE\n" +
+      "- 7004: BOARD\n" +
+      "- 7005: CARD\n" +
+      "- 7006: CASINO\n" +
+      "- 7007: DICE\n" +
+      "- 7008: EDUCATIONAL\n" +
+      "- 7009: FAMILY\n" +
+      "- 7011: MUSIC\n" +
+      "- 7012: PUZZLE\n" +
+      "- 7013: RACING\n" +
+      "- 7014: ROLE_PLAYING\n" +
+      "- 7015: SIMULATION\n" +
+      "- 7016: SPORTS\n" +
+      "- 7017: STRATEGY\n" +
+      "- 7018: TRIVIA\n" +
+      "- 7019: WORD\n\n" +
+      "Magazine Subcategories:\n" +
+      "- 13001: POLITICS\n" +
+      "- 13002: FASHION\n" +
+      "- 13003: HOME\n" +
+      "- 13004: OUTDOORS\n" +
+      "- 13005: SPORTS\n" +
+      "- 13006: AUTOMOTIVE\n" +
+      "- 13007: ARTS\n" +
+      "- 13008: WEDDINGS\n" +
+      "- 13009: BUSINESS\n" +
+      "- 13010: CHILDREN\n" +
+      "- 13011: COMPUTER\n" +
+      "- 13012: FOOD\n" +
+      "- 13013: CRAFTS\n" +
+      "- 13014: ELECTRONICS\n" +
+      "- 13015: ENTERTAINMENT\n" +
+      "- 13017: HEALTH\n" +
+      "- 13018: HISTORY\n" +
+      "- 13019: LITERARY\n" +
+      "- 13020: MEN\n" +
+      "- 13021: MOVIES_AND_MUSIC\n" +
+      "- 13023: FAMILY\n" +
+      "- 13024: PETS\n" +
+      "- 13025: PROFESSIONAL\n" +
+      "- 13026: REGIONAL\n" +
+      "- 13027: SCIENCE\n" +
+      "- 13028: TEENS\n" +
+      "- 13029: TRAVEL\n" +
+      "- 13030: WOMEN"
+    ),
     country: z.string().default("us").describe("Country code (default: us)"),
     num: z.number().max(200).default(50).describe("Number of results (default: 50, max: 200)")
   }, 
@@ -281,8 +376,126 @@ server.tool("google-play-categories",
 server.tool("google-play-list", 
   "Get apps from Google Play collections",
   {
-    collection: z.string().describe("Collection to fetch from (e.g. TOP_FREE, TOP_PAID, etc)"),
-    category: z.string().optional().describe("Category to filter by"),
+    collection: z.enum(['TOP_FREE', 'TOP_PAID', 'GROSSING'])
+      .describe(
+        "Collection to fetch from. Available collections:\n" +
+        "- TOP_FREE: Top free applications\n" +
+        "- TOP_PAID: Top paid applications\n" +
+        "- GROSSING: Top grossing applications"
+      ),
+    category: z.enum([
+      'APPLICATION',
+      'ANDROID_WEAR',
+      'ART_AND_DESIGN',
+      'AUTO_AND_VEHICLES',
+      'BEAUTY',
+      'BOOKS_AND_REFERENCE',
+      'BUSINESS',
+      'COMICS',
+      'COMMUNICATION',
+      'DATING',
+      'EDUCATION',
+      'ENTERTAINMENT',
+      'EVENTS',
+      'FINANCE',
+      'FOOD_AND_DRINK',
+      'HEALTH_AND_FITNESS',
+      'HOUSE_AND_HOME',
+      'LIBRARIES_AND_DEMO',
+      'LIFESTYLE',
+      'MAPS_AND_NAVIGATION',
+      'MEDICAL',
+      'MUSIC_AND_AUDIO',
+      'NEWS_AND_MAGAZINES',
+      'PARENTING',
+      'PERSONALIZATION',
+      'PHOTOGRAPHY',
+      'PRODUCTIVITY',
+      'SHOPPING',
+      'SOCIAL',
+      'SPORTS',
+      'TOOLS',
+      'TRAVEL_AND_LOCAL',
+      'VIDEO_PLAYERS',
+      'WATCH_FACE',
+      'WEATHER',
+      'GAME',
+      'GAME_ACTION',
+      'GAME_ADVENTURE',
+      'GAME_ARCADE',
+      'GAME_BOARD',
+      'GAME_CARD',
+      'GAME_CASINO',
+      'GAME_CASUAL',
+      'GAME_EDUCATIONAL',
+      'GAME_MUSIC',
+      'GAME_PUZZLE',
+      'GAME_RACING',
+      'GAME_ROLE_PLAYING',
+      'GAME_SIMULATION',
+      'GAME_SPORTS',
+      'GAME_STRATEGY',
+      'GAME_TRIVIA',
+      'GAME_WORD',
+      'FAMILY'
+    ]).optional().describe(
+      "Category to filter by. Available categories:\n" +
+      "Main Categories:\n" +
+      "- APPLICATION: All applications\n" +
+      "- ANDROID_WEAR: Wear OS apps\n" +
+      "- ART_AND_DESIGN: Art & Design\n" +
+      "- AUTO_AND_VEHICLES: Auto & Vehicles\n" +
+      "- BEAUTY: Beauty\n" +
+      "- BOOKS_AND_REFERENCE: Books & Reference\n" +
+      "- BUSINESS: Business\n" +
+      "- COMICS: Comics\n" +
+      "- COMMUNICATION: Communication\n" +
+      "- DATING: Dating\n" +
+      "- EDUCATION: Education\n" +
+      "- ENTERTAINMENT: Entertainment\n" +
+      "- EVENTS: Events\n" +
+      "- FINANCE: Finance\n" +
+      "- FOOD_AND_DRINK: Food & Drink\n" +
+      "- HEALTH_AND_FITNESS: Health & Fitness\n" +
+      "- HOUSE_AND_HOME: House & Home\n" +
+      "- LIFESTYLE: Lifestyle\n" +
+      "- MAPS_AND_NAVIGATION: Maps & Navigation\n" +
+      "- MEDICAL: Medical\n" +
+      "- MUSIC_AND_AUDIO: Music & Audio\n" +
+      "- NEWS_AND_MAGAZINES: News & Magazines\n" +
+      "- PARENTING: Parenting\n" +
+      "- PERSONALIZATION: Personalization\n" +
+      "- PHOTOGRAPHY: Photography\n" +
+      "- PRODUCTIVITY: Productivity\n" +
+      "- SHOPPING: Shopping\n" +
+      "- SOCIAL: Social\n" +
+      "- SPORTS: Sports\n" +
+      "- TOOLS: Tools\n" +
+      "- TRAVEL_AND_LOCAL: Travel & Local\n" +
+      "- VIDEO_PLAYERS: Video Players\n" +
+      "- WATCH_FACE: Watch Faces\n" +
+      "- WEATHER: Weather\n\n" +
+      "Game Categories:\n" +
+      "- GAME: All Games\n" +
+      "- GAME_ACTION: Action Games\n" +
+      "- GAME_ADVENTURE: Adventure Games\n" +
+      "- GAME_ARCADE: Arcade Games\n" +
+      "- GAME_BOARD: Board Games\n" +
+      "- GAME_CARD: Card Games\n" +
+      "- GAME_CASINO: Casino Games\n" +
+      "- GAME_CASUAL: Casual Games\n" +
+      "- GAME_EDUCATIONAL: Educational Games\n" +
+      "- GAME_MUSIC: Music Games\n" +
+      "- GAME_PUZZLE: Puzzle Games\n" +
+      "- GAME_RACING: Racing Games\n" +
+      "- GAME_ROLE_PLAYING: Role Playing Games\n" +
+      "- GAME_SIMULATION: Simulation Games\n" +
+      "- GAME_SPORTS: Sports Games\n" +
+      "- GAME_STRATEGY: Strategy Games\n" +
+      "- GAME_TRIVIA: Trivia Games\n" +
+      "- GAME_WORD: Word Games\n" +
+      "- FAMILY: Family Games"
+    ),
     country: z.string().default("us").describe("Country code (default: us)"),
     num: z.number().default(50).describe("Number of results (default: 50)")
   }, 
