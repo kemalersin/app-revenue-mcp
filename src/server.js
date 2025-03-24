@@ -679,10 +679,7 @@ server.tool("google-play-list",
         "Collection to fetch apps from (default: TOP_FREE). Available collections:\n" +
         "- TOP_FREE: Top free applications\n" +
         "- TOP_PAID: Top paid applications\n" +
-        "- GROSSING: Top grossing applications\n" +
-        "- TOP_FREE_GAMES: Top free games\n" +
-        "- TOP_PAID_GAMES: Top paid games\n" +
-        "- TOP_GROSSING_GAMES: Top grossing games"
+        "- GROSSING: Top grossing applications"
       ),
     category: z.enum([
       'APPLICATION',
