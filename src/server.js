@@ -88,13 +88,13 @@ function extractEssentialRevenueData(rawData, platform, identifier) {
   try {
     const essential = {
       app_info: {
-        id: platform === 'ios' ? rawData.app_id : rawData.package_name || identifier,
-        name: rawData.name || rawData.title,
-        publisher: rawData.publisher_name || rawData.developer,
+        id: platform === 'ios' ? rawData.app_id : (rawData.app_id || identifier),
+        name: rawData.name || rawData.title || 'Unknown',
+        publisher: rawData.publisher_name || 'Unknown',
         platform: platform,
         category: rawData.categories?.[0]?.name || 'Unknown',
-        content_rating: rawData.content_rating,
-        current_version: rawData.current_version
+        content_rating: rawData.content_rating || 'Not rated',
+        current_version: rawData.current_version || 'Unknown'
       },
       revenue_metrics: {
         last_month_revenue: rawData.worldwide_last_month_revenue?.value || 0,
@@ -103,22 +103,22 @@ function extractEssentialRevenueData(rawData, platform, identifier) {
         revenue_formatted: formatRevenue(rawData.worldwide_last_month_revenue?.value || 0)
       },
       market_position: {
-        overall_rating: rawData.rating || rawData.score,
-        rating_count: rawData.rating_count || rawData.reviews,
+        overall_rating: rawData.rating || 0,
+        rating_count: rawData.rating_count || 0,
         top_countries: rawData.top_countries?.slice(0, 3) || [],
         category_rankings: extractCategoryRankings(rawData.category_rankings, platform)
       },
       monetization: {
-        price: rawData.price?.string_value || rawData.priceText || 'Free',
-        has_in_app_purchases: rawData.has_in_app_purchases || rawData.offersIAP || false,
+        price: rawData.price?.string_value || 'Free',
+        has_in_app_purchases: rawData.has_in_app_purchases || false,
         top_iap_prices: extractTopIAPPrices(rawData.top_in_app_purchases)
       },
       competitive_analysis: {
         related_apps_count: rawData.related_apps?.length || 0,
         top_competitors: rawData.related_apps?.slice(0, 3)?.map(app => ({
-          name: app.name || app.title,
-          rating: app.rating || app.score,
-          price: app.price?.string_value || app.priceText || 'Free'
+          name: app.name || 'Unknown App',
+          rating: app.rating || 0,
+          price: app.price?.string_value || 'Free'
         })) || []
       }
     };
@@ -149,7 +149,7 @@ function extractCategoryRankings(rankings, platform) {
   if (!rankings) return {};
   
   try {
-    const deviceType = platform === 'ios' ? 'iphone' : 'phone';
+    const deviceType = platform === 'ios' ? 'iphone' : 'android';
     const deviceRankings = rankings[deviceType] || rankings;
     
     return {
