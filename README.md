@@ -90,12 +90,13 @@ The server exposes tools that can be used through any MCP client. For example, u
   }
 }
 
-// Get multiple iOS apps revenue data
+// Get multiple iOS apps revenue data with country filter
 {
   "name": "sensor-tower-ios-revenue",
   "params": {
     "appIds": [341232718, 553834731, 297368629],
-    "includeCompetitors": false
+    "includeCompetitors": false,
+    "country": "TR"
   }
 }
 
@@ -107,12 +108,13 @@ The server exposes tools that can be used through any MCP client. For example, u
   }
 }
 
-// Get multiple Android apps revenue data
+// Get multiple Android apps revenue data with country filter
 {
   "name": "sensor-tower-android-revenue",
   "params": {
     "packageNames": ["com.whatsapp", "com.facebook.katana", "com.instagram.android"],
-    "includeCompetitors": true
+    "includeCompetitors": true,
+    "country": "DE"
   }
 }
 ```
@@ -142,8 +144,9 @@ All tools include error handling and will return appropriate error messages if:
 ### Sensor Tower API Features
 
 - **Batch Processing**: Support for multiple apps in single request (iOS App IDs or Android package names)
+- **Country-Specific Data**: Optional country parameter for region-specific revenue and market data
 - **Optimized Response**: Returns only essential revenue and market intelligence data
-- **Automatic Caching**: Responses are cached for 30 days to minimize API calls and respect rate limits
+- **Automatic Caching**: Responses are cached for 30 days (per country) to minimize API calls and respect rate limits
 - **Rate Limiting**: Automatic detection of 429 errors with appropriate error messages
 - **Error Recovery**: Graceful handling of network issues and API failures per app
 - **Essential Data Only**: 

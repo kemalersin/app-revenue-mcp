@@ -35,15 +35,21 @@ const sensorTowerCache = new Map();
 const CACHE_DURATION = 30 * 24 * 60 * 60 * 1000; // 30 days in milliseconds
 
 // Helper function for Sensor Tower API calls with caching and rate limiting
-async function callSensorTowerAPI(endpoint, cacheKey) {
+async function callSensorTowerAPI(endpoint, cacheKey, country = null) {
+  // Add country parameter to cache key if provided
+  const finalCacheKey = country ? `${cacheKey}_${country}` : cacheKey;
+  
   // Check cache first
-  const cached = sensorTowerCache.get(cacheKey);
+  const cached = sensorTowerCache.get(finalCacheKey);
   if (cached && Date.now() - cached.timestamp < CACHE_DURATION) {
     return cached.data;
   }
 
   try {
-    const response = await fetch(endpoint, {
+    // Add country parameter to endpoint if provided
+    const finalEndpoint = country ? `${endpoint}?country=${country}` : endpoint;
+    
+    const response = await fetch(finalEndpoint, {
       method: 'GET',
       headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
@@ -61,7 +67,7 @@ async function callSensorTowerAPI(endpoint, cacheKey) {
     const data = await response.json();
     
     // Cache the response
-    sensorTowerCache.set(cacheKey, {
+    sensorTowerCache.set(finalCacheKey, {
       data: data,
       timestamp: Date.now()
     });
@@ -973,15 +979,16 @@ server.tool("sensor-tower-ios-revenue",
   "- Monetization details (pricing, IAP)\n" +
   "- Top 3 competitors analysis\n" +
   "- Market positioning metrics\n" +
-  "Supports multiple apps in single request. Data cached for 30 days.",
+  "Supports multiple apps in single request. Optional country parameter for region-specific data. Data cached for 30 days.",
   {
     appIds: z.union([
       z.number(),
       z.array(z.number())
     ]).describe("iOS App Store ID(s) - single number or array of numbers (e.g., 341232718 or [341232718, 553834731])"),
-    includeCompetitors: z.boolean().default(true).describe("Include competitor analysis (default: true)")
+    includeCompetitors: z.boolean().default(true).describe("Include competitor analysis (default: true)"),
+    country: z.string().optional().describe("Country code for region-specific data (e.g., 'TR', 'US', 'DE'). Optional parameter.")
   },
-  async ({ appIds, includeCompetitors }) => {
+  async ({ appIds, includeCompetitors, country }) => {
     try {
       const ids = Array.isArray(appIds) ? appIds : [appIds];
       const results = [];
@@ -990,7 +997,7 @@ server.tool("sensor-tower-ios-revenue",
         try {
           const endpoint = `https://app.sensortower.com/api/ios/apps/${appId}`;
           const cacheKey = `ios_${appId}`;
-          const rawData = await callSensorTowerAPI(endpoint, cacheKey);
+          const rawData = await callSensorTowerAPI(endpoint, cacheKey, country);
           
           let essentialData = extractEssentialRevenueData(rawData, 'ios', appId);
           
@@ -1043,15 +1050,16 @@ server.tool("sensor-tower-android-revenue",
   "- Monetization details (pricing, IAP)\n" +
   "- Top 3 competitors analysis\n" +
   "- Market positioning metrics\n" +
-  "Supports multiple apps in single request. Data cached for 30 days.",
+  "Supports multiple apps in single request. Optional country parameter for region-specific data. Data cached for 30 days.",
   {
     packageNames: z.union([
       z.string(),
       z.array(z.string())
     ]).describe("Android package name(s) - single string or array (e.g., 'com.YoStarEN.Arknights' or ['com.whatsapp', 'com.facebook.katana'])"),
-    includeCompetitors: z.boolean().default(true).describe("Include competitor analysis (default: true)")
+    includeCompetitors: z.boolean().default(true).describe("Include competitor analysis (default: true)"),
+    country: z.string().optional().describe("Country code for region-specific data (e.g., 'TR', 'US', 'DE'). Optional parameter.")
   },
-  async ({ packageNames, includeCompetitors }) => {
+  async ({ packageNames, includeCompetitors, country }) => {
     try {
       const names = Array.isArray(packageNames) ? packageNames : [packageNames];
       const results = [];
@@ -1060,7 +1068,7 @@ server.tool("sensor-tower-android-revenue",
         try {
           const endpoint = `https://app.sensortower.com/api/android/apps/${packageName}`;
           const cacheKey = `android_${packageName}`;
-          const rawData = await callSensorTowerAPI(endpoint, cacheKey);
+          const rawData = await callSensorTowerAPI(endpoint, cacheKey, country);
           
           let essentialData = extractEssentialRevenueData(rawData, 'android', packageName);
           
