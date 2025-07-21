@@ -1,5 +1,7 @@
 # App Market Intelligence MCP (with Revenue Analytics)
 
+[![smithery badge](https://smithery.ai/badge/@kemalersin/app-revenue-mcp)](https://smithery.ai/server/@kemalersin/app-revenue-mcp)
+
 > **Note:** This project is a fork of [JiantaoFu/AppInsightMCP](https://github.com/JiantaoFu/AppInsightMCP). The original MCP provides comprehensive app market intelligence. This fork extends it by adding revenue analytics tools (Sensor Tower integration) for App Store and Google Play apps.
 
 An MCP server that provides comprehensive market intelligence and **revenue analytics** by analyzing data from both the Apple App Store and Google Play Store. Get insights about apps, market trends, competitors, user feedback, and now—**app revenue and monetization metrics**—across the major mobile app marketplaces.
@@ -51,6 +53,15 @@ Start the MCP server:
 node src/server.js
 ```
 
+### Installing via Smithery
+
+To install app-revenue-mcp for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@kemalersin/app-revenue-mcp):
+
+```bash
+npx -y @smithery/cli install @kemalersin/app-revenue-mcp --client claude
+```
+
+### Installing Manually
 The server exposes tools that can be used through any MCP client. For example, using Claude for Desktop, you can:
 
 - Search for apps across both stores
