@@ -30,6 +30,147 @@ import store from '@jeromyfu/app-store-scraper';
 import gplay from '@jeromyfu/google-play-scraper';
 import { z } from 'zod';
 
+// Cache for Sensor Tower API responses (in-memory cache)
+const sensorTowerCache = new Map();
+const CACHE_DURATION = 30 * 24 * 60 * 60 * 1000; // 30 days in milliseconds
+
+// Helper function for Sensor Tower API calls with caching and rate limiting
+async function callSensorTowerAPI(endpoint, cacheKey) {
+  // Check cache first
+  const cached = sensorTowerCache.get(cacheKey);
+  if (cached && Date.now() - cached.timestamp < CACHE_DURATION) {
+    return cached.data;
+  }
+
+  try {
+    const response = await fetch(endpoint, {
+      method: 'GET',
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+      }
+    });
+
+    if (response.status === 429) {
+      throw new Error('Rate limit exceeded. Please try again later.');
+    }
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    
+    // Cache the response
+    sensorTowerCache.set(cacheKey, {
+      data: data,
+      timestamp: Date.now()
+    });
+
+    return data;
+  } catch (error) {
+    if (error.message.includes('Rate limit')) {
+      throw error;
+    }
+    throw new Error(`Failed to fetch data from Sensor Tower: ${error.message}`);
+  }
+}
+
+// Helper function to extract essential revenue data
+function extractEssentialRevenueData(rawData, platform, identifier) {
+  if (!rawData) return null;
+
+  try {
+    const essential = {
+      app_info: {
+        id: platform === 'ios' ? rawData.app_id : rawData.package_name || identifier,
+        name: rawData.name || rawData.title,
+        publisher: rawData.publisher_name || rawData.developer,
+        platform: platform,
+        category: rawData.categories?.[0]?.name || 'Unknown',
+        content_rating: rawData.content_rating,
+        current_version: rawData.current_version
+      },
+      revenue_metrics: {
+        last_month_revenue: rawData.worldwide_last_month_revenue?.value || 0,
+        last_month_downloads: rawData.worldwide_last_month_downloads?.value || 0,
+        revenue_currency: rawData.worldwide_last_month_revenue?.currency || 'USD',
+        revenue_formatted: formatRevenue(rawData.worldwide_last_month_revenue?.value || 0)
+      },
+      market_position: {
+        overall_rating: rawData.rating || rawData.score,
+        rating_count: rawData.rating_count || rawData.reviews,
+        top_countries: rawData.top_countries?.slice(0, 3) || [],
+        category_rankings: extractCategoryRankings(rawData.category_rankings, platform)
+      },
+      monetization: {
+        price: rawData.price?.string_value || rawData.priceText || 'Free',
+        has_in_app_purchases: rawData.has_in_app_purchases || rawData.offersIAP || false,
+        top_iap_prices: extractTopIAPPrices(rawData.top_in_app_purchases)
+      },
+      competitive_analysis: {
+        related_apps_count: rawData.related_apps?.length || 0,
+        top_competitors: rawData.related_apps?.slice(0, 3)?.map(app => ({
+          name: app.name || app.title,
+          rating: app.rating || app.score,
+          price: app.price?.string_value || app.priceText || 'Free'
+        })) || []
+      }
+    };
+
+    return essential;
+  } catch (error) {
+    return {
+      error: `Failed to extract data: ${error.message}`,
+      raw_data_available: !!rawData
+    };
+  }
+}
+
+// Helper function to format revenue
+function formatRevenue(cents) {
+  if (!cents || cents === 0) return '$0';
+  const dollars = cents / 100;
+  if (dollars >= 1000000) {
+    return `$${(dollars / 1000000).toFixed(1)}M`;
+  } else if (dollars >= 1000) {
+    return `$${(dollars / 1000).toFixed(1)}K`;
+  }
+  return `$${dollars.toLocaleString()}`;
+}
+
+// Helper function to extract category rankings
+function extractCategoryRankings(rankings, platform) {
+  if (!rankings) return {};
+  
+  try {
+    const deviceType = platform === 'ios' ? 'iphone' : 'phone';
+    const deviceRankings = rankings[deviceType] || rankings;
+    
+    return {
+      top_free: deviceRankings?.top_free?.primary_categories?.[0] || null,
+      top_grossing: deviceRankings?.top_grossing?.primary_categories?.[0] || null,
+      top_paid: deviceRankings?.top_paid?.primary_categories?.[0] || null
+    };
+  } catch (error) {
+    return {};
+  }
+}
+
+// Helper function to extract top IAP prices
+function extractTopIAPPrices(iapData) {
+  if (!iapData) return [];
+  
+  try {
+    const prices = [];
+    if (iapData.US) {
+      prices.push(...iapData.US.slice(0, 3).map(iap => iap.price));
+    }
+    return [...new Set(prices)]; // Remove duplicates
+  } catch (error) {
+    return [];
+  }
+}
+
 const server = new McpServer({
   name: "app-info-scraper",
   version: "1.0.0"
@@ -821,6 +962,146 @@ server.tool("google-play-list",
       fullDetail
     });
     return { content: [{ type: "text", text: JSON.stringify(results) }] };
+  }
+);
+
+// Sensor Tower iOS Revenue Tool
+server.tool("sensor-tower-ios-revenue", 
+  "Get essential revenue and market intelligence data for iOS apps from Sensor Tower. Returns optimized data including:\n" +
+  "- Monthly revenue and download estimates\n" +
+  "- App Store rankings and ratings\n" +
+  "- Monetization details (pricing, IAP)\n" +
+  "- Top 3 competitors analysis\n" +
+  "- Market positioning metrics\n" +
+  "Supports multiple apps in single request. Data cached for 30 days.",
+  {
+    appIds: z.union([
+      z.number(),
+      z.array(z.number())
+    ]).describe("iOS App Store ID(s) - single number or array of numbers (e.g., 341232718 or [341232718, 553834731])"),
+    includeCompetitors: z.boolean().default(true).describe("Include competitor analysis (default: true)")
+  },
+  async ({ appIds, includeCompetitors }) => {
+    try {
+      const ids = Array.isArray(appIds) ? appIds : [appIds];
+      const results = [];
+
+      for (const appId of ids) {
+        try {
+          const endpoint = `https://app.sensortower.com/api/ios/apps/${appId}`;
+          const cacheKey = `ios_${appId}`;
+          const rawData = await callSensorTowerAPI(endpoint, cacheKey);
+          
+          let essentialData = extractEssentialRevenueData(rawData, 'ios', appId);
+          
+          // Remove competitors if not requested
+          if (!includeCompetitors && essentialData.competitive_analysis) {
+            delete essentialData.competitive_analysis;
+          }
+          
+          results.push({
+            app_id: appId,
+            success: true,
+            data: essentialData
+          });
+        } catch (error) {
+          results.push({
+            app_id: appId,
+            success: false,
+            error: error.message
+          });
+        }
+      }
+
+      const summary = {
+        total_apps: ids.length,
+        successful: results.filter(r => r.success).length,
+        failed: results.filter(r => !r.success).length,
+        apps: results
+      };
+
+      return { content: [{ type: "text", text: JSON.stringify(summary, null, 2) }] };
+    } catch (error) {
+      return { 
+        content: [{ 
+          type: "text", 
+          text: JSON.stringify({ 
+            error: error.message,
+            platform: "iOS"
+          }, null, 2) 
+        }] 
+      };
+    }
+  }
+);
+
+// Sensor Tower Android Revenue Tool
+server.tool("sensor-tower-android-revenue", 
+  "Get essential revenue and market intelligence data for Android apps from Sensor Tower. Returns optimized data including:\n" +
+  "- Monthly revenue and download estimates\n" +
+  "- Play Store rankings and ratings\n" +
+  "- Monetization details (pricing, IAP)\n" +
+  "- Top 3 competitors analysis\n" +
+  "- Market positioning metrics\n" +
+  "Supports multiple apps in single request. Data cached for 30 days.",
+  {
+    packageNames: z.union([
+      z.string(),
+      z.array(z.string())
+    ]).describe("Android package name(s) - single string or array (e.g., 'com.YoStarEN.Arknights' or ['com.whatsapp', 'com.facebook.katana'])"),
+    includeCompetitors: z.boolean().default(true).describe("Include competitor analysis (default: true)")
+  },
+  async ({ packageNames, includeCompetitors }) => {
+    try {
+      const names = Array.isArray(packageNames) ? packageNames : [packageNames];
+      const results = [];
+
+      for (const packageName of names) {
+        try {
+          const endpoint = `https://app.sensortower.com/api/android/apps/${packageName}`;
+          const cacheKey = `android_${packageName}`;
+          const rawData = await callSensorTowerAPI(endpoint, cacheKey);
+          
+          let essentialData = extractEssentialRevenueData(rawData, 'android', packageName);
+          
+          // Remove competitors if not requested
+          if (!includeCompetitors && essentialData.competitive_analysis) {
+            delete essentialData.competitive_analysis;
+          }
+          
+          results.push({
+            package_name: packageName,
+            success: true,
+            data: essentialData
+          });
+        } catch (error) {
+          results.push({
+            package_name: packageName,
+            success: false,
+            error: error.message
+          });
+        }
+      }
+
+      const summary = {
+        total_apps: names.length,
+        successful: results.filter(r => r.success).length,
+        failed: results.filter(r => !r.success).length,
+        apps: results
+      };
+
+      return { content: [{ type: "text", text: JSON.stringify(summary, null, 2) }] };
+    } catch (error) {
+      return { 
+        content: [{ 
+          type: "text", 
+          text: JSON.stringify({ 
+            error: error.message,
+            platform: "Android"
+          }, null, 2) 
+        }] 
+      };
+    }
   }
 );
 

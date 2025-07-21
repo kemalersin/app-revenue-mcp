@@ -1,8 +1,8 @@
-# App Market Intelligence MCP
+# App Market Intelligence MCP (with Revenue Analytics)
 
-[![smithery badge](https://smithery.ai/badge/@JiantaoFu/appinsightmcp)](https://smithery.ai/server/@JiantaoFu/appinsightmcp)
+> **Note:** This project is a fork of [JiantaoFu/AppInsightMCP](https://github.com/JiantaoFu/AppInsightMCP). The original MCP provides comprehensive app market intelligence. This fork extends it by adding revenue analytics tools (Sensor Tower integration) for App Store and Google Play apps.
 
-An MCP server that provides comprehensive market intelligence by analyzing data from both the Apple App Store and Google Play Store. Get insights about apps, market trends, competitors, and user feedback across the major mobile app marketplaces.
+An MCP server that provides comprehensive market intelligence and **revenue analytics** by analyzing data from both the Apple App Store and Google Play Store. Get insights about apps, market trends, competitors, user feedback, and now—**app revenue and monetization metrics**—across the major mobile app marketplaces.
 
 ## API Coverage
 
@@ -35,6 +35,13 @@ An MCP server that provides comprehensive market intelligence by analyzing data 
 | permissions | ✅ | google-play-permissions | Get app permissions |
 | datasafety  | ✅ | google-play-datasafety | Get data safety information |
 | categories  | ✅ | google-play-categories | Get list of categories |
+
+### Sensor Tower Revenue Intelligence API Coverage
+
+| Platform | Implemented | MCP Tool Name | Description |
+|----------|-------------|---------------|-------------|
+| iOS      | ✅ | sensor-tower-ios-revenue | Get comprehensive revenue and market intelligence data for iOS apps |
+| Android  | ✅ | sensor-tower-android-revenue | Get comprehensive revenue and market intelligence data for Android apps |
 
 ## Usage
 
@@ -74,6 +81,40 @@ The server exposes tools that can be used through any MCP client. For example, u
     "num": 10
   }
 }
+
+// Get iOS app revenue intelligence from Sensor Tower (single app)
+{
+  "name": "sensor-tower-ios-revenue",
+  "params": {
+    "appIds": 341232718
+  }
+}
+
+// Get multiple iOS apps revenue data
+{
+  "name": "sensor-tower-ios-revenue",
+  "params": {
+    "appIds": [341232718, 553834731, 297368629],
+    "includeCompetitors": false
+  }
+}
+
+// Get Android app revenue intelligence from Sensor Tower (single app)
+{
+  "name": "sensor-tower-android-revenue",
+  "params": {
+    "packageNames": "com.YoStarEN.Arknights"
+  }
+}
+
+// Get multiple Android apps revenue data
+{
+  "name": "sensor-tower-android-revenue",
+  "params": {
+    "packageNames": ["com.whatsapp", "com.facebook.katana", "com.instagram.android"],
+    "includeCompetitors": true
+  }
+}
 ```
 
 ## Test with MCP Inspector
@@ -90,59 +131,6 @@ npm run test:inspector
 npx @wong2/mcp-cli npx -y "app-insight-mcp"
 ```
 
-## Usage with Claude Desktop
-Add this to your `claude_desktop_config.json`:
-
-### Installing via Smithery
-
-To install App Market Intelligence for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@JiantaoFu/appinsightmcp):
-
-```bash
-npx -y @smithery/cli install @JiantaoFu/appinsightmcp --client claude
-```
-
-### Docker
-
-```json
-{
-  "mcpServers": {
-    "app-insight-mcp": {
-      "command": "docker",
-      "args": [
-        "run",
-        "-i",
-        "--rm",
-        "app-insight-mcp"
-      ]
-    }
-  }
-}
-```
-
-### NPX
-
-```json
-{
-  "mcpServers": {
-    "app-insight-mcp": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@jeromyfu/app-insight-mcp"
-      ]
-    }
-  }
-}
-```
-
-## Build
-
-Docker build:
-
-```bash
-docker build -t app-insight-mcp -f Dockerfile .
-```
-
 ## Error Handling
 
 All tools include error handling and will return appropriate error messages if:
@@ -150,6 +138,20 @@ All tools include error handling and will return appropriate error messages if:
 - API calls fail
 - Rate limits are hit
 - Invalid IDs or parameters are provided
+
+### Sensor Tower API Features
+
+- **Batch Processing**: Support for multiple apps in single request (iOS App IDs or Android package names)
+- **Optimized Response**: Returns only essential revenue and market intelligence data
+- **Automatic Caching**: Responses are cached for 30 days to minimize API calls and respect rate limits
+- **Rate Limiting**: Automatic detection of 429 errors with appropriate error messages
+- **Error Recovery**: Graceful handling of network issues and API failures per app
+- **Essential Data Only**: 
+  - Monthly revenue & download estimates
+  - Market rankings & ratings
+  - Monetization details (pricing, IAP)
+  - Top 3 competitors (optional)
+  - Market positioning metrics
 
 ## Contributing
 

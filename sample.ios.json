@@ -1,0 +1,2688 @@
+{
+    "game_intel_data": {},
+    "featured_reviews": [
+        {
+            "content": "A great service providing a platform for success on a human health quest. The My Fitness Pal application allows anyone to compile a detailed log of nutritional and fitness info into an easy to use, easy to interpret, easy to afford (free), and simple to navigate system. The breakdown of information into multiple charts and graphs is a phenomenal resource. The flexibility of being able to modify multiple facets of your goals such as macro nutrients, weight loss/gain per week, etc. is extremely intuitive and suitable for a wide range of fitness/nutritional goals. Nearly anyone can master this application within a reasonable timeframe of consistent effort and in turn become the master of their fitness/health destiny. My Fitness Pal has provided a great service and allowed for anyone with the desire to do so to achieve the best version of themselves possible. Also, after a long endeavor spanning months or years and reviewing your data in retrospect allows for a particular cognizance for what worked well and what did not. This, in turn, provides a chance to hone an adequate regimen into the ultimate program fine tuned to your personal goals. My Fitness pal provides an amenity that fosters a healthier and happier human race to those who utilize it. This application has earned a large following of motivated individuals for these reasons and stood the test of time. Go forth and conquer your goals with profound efficiency.\n-Klahr",
+            "version": "19.7.1",
+            "date": "2019-08-04T00:00:00Z",
+            "rating": 5,
+            "app_id": 341232718,
+            "username": "SSJ Klahr",
+            "title": "App Review",
+            "country": "US",
+            "tags": [
+                "gamification",
+                "updates_and_maintenance",
+                "performance_and_bugs"
+            ],
+            "review_id": 4569445022
+        },
+        {
+            "content": "I really like this app. I use it for calorie counting. It links to Garmin Connect for integrating exercise calories into the overall balance for the day. You can scan barcodes for food  items for easier logging. You can select items from your history of previous entries (great for frequently eaten foods). You can text search for foods, which accesses an enormous list of prior entries that I assume have been entered or scanned by other users. So why only four stars? My only peeve with the program is that it doesn’t seem to let users edit the serving size for many items, beyond being able to select from a too often extremely limited and sometimes arbitrary mix of imperial/metric/liquid/solid measures. The options presented vary widely from item to item, with little apparent logic. The best solution I have is to try to find items that use 1g as a serving size and then list the number of grams for that day’s serving as the number of servings for that entry. Since I’m using a food scale, that works for me. Seems a better solution would be to allow users to edit any food item to select from a full complement of serving sizes (or to just directly enter the desired serving size using the keyboard). Or just provide 1g as a choice in all cases (or at least all solid cases). In any case, I love and recommend the app, with the measurement detail being my only pet peeve.",
+            "version": "22.8.0",
+            "date": "2022-04-24T00:00:00Z",
+            "rating": 4,
+            "app_id": 341232718,
+            "username": "georg-o",
+            "title": "Great app but could use more user control of selecting or defining serving sizes",
+            "country": "US",
+            "tags": [],
+            "review_id": 8602115554
+        },
+        {
+            "content": "I’ve been using this app for years. There are so many ads now which I understand. But some of them pop up on your feed right when you open the app and there are some really gross images. A lot of times I am eating when I enter my calories and the images for the weird ads are so gross it makes me stop eating and lose my appetite. There was one that came up for weeks that showed someone getting ear wax removed. Now I logged in and it shows a close up of someone removing some type of gross substance from the back of their throat. Why would you have these kinds of ads show up on the home page of a food log app? \n\nAlso, if you sync with Fitbit it enters your workouts automatically but it also tracks your steps and gives you a calorie adjustment for that as well, which Is like double tracking. If you go for a run for example, it will sync the workout from fitbit and give you the calories for that, and then also add in your steps from the run and give you more calories which I don’t think is accurate. \n\nOther than that, no other food app compares as far as the extensive food database and the ease of being able to enter recipes, meals, etc. I also love the social functionality where friends can comment on your status. Of course they have to scroll through all the ads in the feed to find your updates, and overlook the gross images of earwax and other things.",
+            "version": "20.11.0",
+            "date": "2020-06-29T00:00:00Z",
+            "rating": 4,
+            "app_id": 341232718,
+            "username": "AliHart1983",
+            "title": "Gross Pictures with Ads but extensive database",
+            "country": "US",
+            "tags": [
+                "gamification",
+                "advertisements",
+                "updates_and_maintenance"
+            ],
+            "review_id": 6136811071
+        }
+    ],
+    "related_apps": [
+        {
+            "app_id": 297368629,
+            "app_view_url": "/ios/us/fitnow/app/lose-it-calorie-counter/297368629/",
+            "country": "US",
+            "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/55/82/96/558296cc-6d1c-475f-0aff-ab478b521137/AppIcon-0-1x_U007epad-0-8-0-85-220-0.png/150x150bb.jpg",
+            "name": "Lose It! – Calorie Counter",
+            "os": "ios",
+            "price": {
+                "currency": "USD",
+                "value": 0,
+                "string_value": "$0.00",
+                "subunit_to_unit": 100
+            },
+            "publisher_id": 297368632,
+            "publisher_name": "FitNow",
+            "publisher_profile_url": "/publisher/ios/297368632",
+            "rating": 4.76297589910818,
+            "rating_breakdown": [
+                7679,
+                4145,
+                19473,
+                84571,
+                587301
+            ],
+            "rating_count": 703169
+        },
+        {
+            "app_id": 287529757,
+            "app_view_url": "/ios/us/mynetdiary-inc/app/calorie-counter-mynetdiary/287529757/",
+            "country": "US",
+            "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/75/78/59/75785993-8279-3378-2b76-68019878b1c9/AppIconFree-0-0-1x_U007epad-0-0-0-1-0-0-85-220.png/150x150bb.jpg",
+            "name": "Calorie Counter - MyNetDiary",
+            "os": "ios",
+            "price": {
+                "currency": "USD",
+                "value": 0,
+                "string_value": "$0.00",
+                "subunit_to_unit": 100
+            },
+            "publisher_id": 287529760,
+            "publisher_name": "MyNetDiary Inc.",
+            "publisher_profile_url": "/publisher/ios/287529760",
+            "rating": 4.81999219717402,
+            "rating_breakdown": [
+                1098,
+                538,
+                2287,
+                10644,
+                103339
+            ],
+            "rating_count": 117906
+        },
+        {
+            "app_id": 1145935738,
+            "app_view_url": "/ios/us/cronometer-software-inc/app/calorie-counter-cronometer/1145935738/",
+            "country": "US",
+            "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/37/57/9d/37579da3-b367-4dab-4b9d-bd07d2960e57/CRONOMETER-GOLDAppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/150x150bb.jpg",
+            "name": "Calorie Counter: Cronometer",
+            "os": "ios",
+            "price": {
+                "currency": "USD",
+                "value": 0,
+                "string_value": "$0.00",
+                "subunit_to_unit": 100
+            },
+            "publisher_id": 465173201,
+            "publisher_name": "Cronometer Software Inc",
+            "publisher_profile_url": "/publisher/ios/465173201",
+            "rating": 4.772832886505809,
+            "rating_breakdown": [
+                781,
+                458,
+                2043,
+                9210,
+                65838
+            ],
+            "rating_count": 78330
+        },
+        {
+            "app_id": 398436747,
+            "app_view_url": "/ios/us/maple-media-apps-llc/app/fooducate-nutrition-coach/398436747/",
+            "country": "US",
+            "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/80/4d/24/804d249b-fb21-39e7-12a5-4732d9303678/FooducateAppIcon-0-0-1x_U007epad-0-1-0-85-220.png/150x150bb.jpg",
+            "name": "Fooducate: Nutrition Coach",
+            "os": "ios",
+            "price": {
+                "currency": "USD",
+                "value": 0,
+                "string_value": "$0.00",
+                "subunit_to_unit": 100
+            },
+            "publisher_id": 1289801633,
+            "publisher_name": "Maple Media Apps, LLC",
+            "publisher_profile_url": "/publisher/ios/1289801633",
+            "rating": 4.648222882576593,
+            "rating_breakdown": [
+                2240,
+                906,
+                3306,
+                8819,
+                61792
+            ],
+            "rating_count": 77063
+        },
+        {
+            "app_id": 1539625670,
+            "app_view_url": "/ios/us/luni/app/nutrition-coach-food-tracker/1539625670/",
+            "country": "US",
+            "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/30/63/98/3063985b-89d1-037e-ad45-862ac0e0bf11/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/150x150bb.jpg",
+            "name": "Nutrition Coach: Food tracker",
+            "os": "ios",
+            "price": {
+                "currency": "USD",
+                "value": 0,
+                "string_value": "$0.00",
+                "subunit_to_unit": 100
+            },
+            "publisher_id": 1274051421,
+            "publisher_name": "Luni",
+            "publisher_profile_url": "/publisher/ios/1274051421",
+            "rating": 4.795475351306815,
+            "rating_breakdown": [
+                543,
+                495,
+                2956,
+                8304,
+                75090
+            ],
+            "rating_count": 87388
+        },
+        {
+            "app_id": 1553503471,
+            "app_view_url": "/ios/us/stronger-by-science-technologies-llc/app/macrofactor-macro-tracker/1553503471/",
+            "country": "US",
+            "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e8/0b/68/e80b68bd-e05b-1e85-de2e-57a64a4db25f/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/150x150bb.jpg",
+            "name": "MacroFactor - Macro Tracker",
+            "os": "ios",
+            "price": {
+                "currency": "USD",
+                "value": 0,
+                "string_value": "$0.00",
+                "subunit_to_unit": 100
+            },
+            "publisher_id": 1553503473,
+            "publisher_name": "Stronger By Science Technologies LLC",
+            "publisher_profile_url": "/publisher/ios/1553503473",
+            "rating": 4.802770523447258,
+            "rating_breakdown": [
+                241,
+                63,
+                113,
+                358,
+                8032
+            ],
+            "rating_count": 8807
+        },
+        {
+            "app_id": 1061691342,
+            "app_view_url": "/ios/us/syndigo/app/nutritionix-track/1061691342/",
+            "country": "US",
+            "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/d0/1a/c7/d01ac70f-9ecf-30a2-74a6-2ab0ce434dd0/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/150x150bb.jpg",
+            "name": "Nutritionix Track",
+            "os": "ios",
+            "price": {
+                "currency": "USD",
+                "value": 0,
+                "string_value": "$0.00",
+                "subunit_to_unit": 100
+            },
+            "publisher_id": 1767450762,
+            "publisher_name": "Syndigo",
+            "publisher_profile_url": "/publisher/ios/1767450762",
+            "rating": 4.77796110464959,
+            "rating_breakdown": [
+                425,
+                234,
+                1072,
+                3663,
+                31577
+            ],
+            "rating_count": 36971
+        },
+        {
+            "app_id": 1441252752,
+            "app_view_url": "/ios/us/funn-media-llc/app/calory-ai-calorie-counter/1441252752/",
+            "country": "US",
+            "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/94/75/af/9475afb1-30a3-7b5a-a2e6-66004ba34754/AppIcon-0-1x_U007epad-0-1-0-85-220-0.png/150x150bb.jpg",
+            "name": "Calory Ai: Calorie Counter",
+            "os": "ios",
+            "price": {
+                "currency": "USD",
+                "value": 0,
+                "string_value": "$0.00",
+                "subunit_to_unit": 100
+            },
+            "publisher_id": 646811578,
+            "publisher_name": "Funn Media, LLC",
+            "publisher_profile_url": "/publisher/ios/646811578",
+            "rating": 4.613578424795384,
+            "rating_breakdown": [
+                268,
+                134,
+                307,
+                792,
+                5952
+            ],
+            "rating_count": 7453
+        },
+        {
+            "app_id": 1210995590,
+            "app_view_url": "/ios/us/venn-interactive-inc/app/stupid-simple-macro-tracker/1210995590/",
+            "country": "US",
+            "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ad/4c/d6/ad4cd65a-841a-26bc-8d8c-1d570c8edaf5/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/150x150bb.jpg",
+            "name": "Stupid Simple Macro Tracker",
+            "os": "ios",
+            "price": {
+                "currency": "USD",
+                "value": 0,
+                "string_value": "$0.00",
+                "subunit_to_unit": 100
+            },
+            "publisher_id": 730140479,
+            "publisher_name": "Venn Interactive, Inc.",
+            "publisher_profile_url": "/publisher/ios/730140479",
+            "rating": 4.625679931291153,
+            "rating_breakdown": [
+                312,
+                110,
+                242,
+                553,
+                5769
+            ],
+            "rating_count": 6986
+        },
+        {
+            "app_id": 1541193285,
+            "app_view_url": "/ios/us/ten-labs-ltd/app/protein-tracker-protein-pal/1541193285/",
+            "country": "US",
+            "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/12/16/59/121659a2-452a-12af-8b81-e24c4cccdf91/AppIcon-0-1x_U007emarketing-0-7-0-85-220-0.png/150x150bb.jpg",
+            "name": "Protein Tracker: Protein Pal",
+            "os": "ios",
+            "price": {
+                "currency": "USD",
+                "value": 0,
+                "string_value": "$0.00",
+                "subunit_to_unit": 100
+            },
+            "publisher_id": 979619208,
+            "publisher_name": "Ten Labs Ltd",
+            "publisher_profile_url": "/publisher/ios/979619208",
+            "rating": 4.713138925294889,
+            "rating_breakdown": [
+                213,
+                36,
+                173,
+                445,
+                5237
+            ],
+            "rating_count": 6104
+        }
+    ],
+    "top_in_app_purchases": {
+        "US": [
+            {
+                "iap_id": 1496837631,
+                "name": "MyFitnessPal Monthly Premium",
+                "price": "$19.99",
+                "duration": "P1M"
+            },
+            {
+                "iap_id": 1496894684,
+                "name": "MyFitnessPal Yearly Premium",
+                "price": "$79.99",
+                "duration": "P1Y"
+            },
+            {
+                "iap_id": 1174051256,
+                "name": "MyFitnessPal Premium (Monthly)",
+                "price": "$9.99",
+                "duration": "P1M"
+            },
+            {
+                "iap_id": 1496895350,
+                "name": "MyFitnessPal Monthly Premium",
+                "price": "$19.99",
+                "duration": "P1M"
+            },
+            {
+                "iap_id": 990310053,
+                "name": "MyFitnessPal Monthly Premium",
+                "price": "$9.99",
+                "duration": "P1M"
+            },
+            {
+                "iap_id": 1174051261,
+                "name": "MyFitnessPal Premium (Annual)",
+                "price": "$49.99",
+                "duration": "P1Y"
+            },
+            {
+                "iap_id": 1496895832,
+                "name": "MyFitnessPal Yearly Premium",
+                "price": "$79.99",
+                "duration": "P1Y"
+            },
+            {
+                "iap_id": 990310877,
+                "name": "MyFitnessPal Yearly Premium",
+                "price": "$49.99",
+                "duration": "P1Y"
+            },
+            {
+                "iap_id": 6741170281,
+                "name": "MyFitnessPal Annual Premium+",
+                "price": "$99.99",
+                "duration": "P1Y"
+            },
+            {
+                "iap_id": 1240897404,
+                "name": "MyFitnessPal Premium (Monthly)",
+                "price": "$9.99",
+                "duration": "P1M"
+            }
+        ]
+    },
+    "versions": [
+        {
+            "date": 1752537600000,
+            "value": "25.28.0"
+        },
+        {
+            "date": 1752105600000,
+            "value": "25.27.1"
+        },
+        {
+            "date": 1751932800000,
+            "value": "25.27.0"
+        },
+        {
+            "date": 1751328000000,
+            "value": "25.26.0"
+        },
+        {
+            "date": 1750723200000,
+            "value": "25.25.0"
+        },
+        {
+            "date": 1750204800000,
+            "value": "25.24.1"
+        },
+        {
+            "date": 1750118400000,
+            "value": "25.24.0"
+        },
+        {
+            "date": 1749600000000,
+            "value": "25.22.1"
+        },
+        {
+            "date": 1748908800000,
+            "value": "25.22.0"
+        },
+        {
+            "date": 1748304000000,
+            "value": "25.21.0"
+        },
+        {
+            "date": 1747785600000,
+            "value": "25.20.1"
+        },
+        {
+            "date": 1747699200000,
+            "value": "25.20.0"
+        },
+        {
+            "date": 1747180800000,
+            "value": "25.19.0"
+        },
+        {
+            "date": 1746057600000,
+            "value": "25.17.1"
+        },
+        {
+            "date": 1745971200000,
+            "value": "25.17.0"
+        },
+        {
+            "date": 1745366400000,
+            "value": "25.16.0"
+        },
+        {
+            "date": 1744761600000,
+            "value": "25.15.0"
+        },
+        {
+            "date": 1744156800000,
+            "value": "25.14.0"
+        },
+        {
+            "date": 1743638400000,
+            "value": "25.13.1"
+        },
+        {
+            "date": 1743552000000,
+            "value": "25.13.0"
+        },
+        {
+            "date": 1742947200000,
+            "value": "25.12.0"
+        },
+        {
+            "date": 1742515200000,
+            "value": "25.11.1"
+        },
+        {
+            "date": 1742342400000,
+            "value": "25.11.0"
+        },
+        {
+            "date": 1741737600000,
+            "value": "25.10.0"
+        },
+        {
+            "date": 1741132800000,
+            "value": "25.9.0"
+        },
+        {
+            "date": 1740528000000,
+            "value": "25.8.0"
+        },
+        {
+            "date": 1739923200000,
+            "value": "25.7.0"
+        },
+        {
+            "date": 1739318400000,
+            "value": "25.6.0"
+        },
+        {
+            "date": 1738713600000,
+            "value": "25.5.0"
+        },
+        {
+            "date": 1738108800000,
+            "value": "25.4.0"
+        },
+        {
+            "date": 1737504000000,
+            "value": "25.3.0"
+        },
+        {
+            "date": 1736899200000,
+            "value": "25.1.0"
+        },
+        {
+            "date": 1734652800000,
+            "value": "24.49.4"
+        },
+        {
+            "date": 1734480000000,
+            "value": "24.49.3"
+        },
+        {
+            "date": 1734307200000,
+            "value": "24.49.2"
+        },
+        {
+            "date": 1733961600000,
+            "value": "24.49.1"
+        },
+        {
+            "date": 1733875200000,
+            "value": "24.49.0"
+        },
+        {
+            "date": 1733702400000,
+            "value": "24.47.1"
+        },
+        {
+            "date": 1733270400000,
+            "value": "24.47.0"
+        },
+        {
+            "date": 1732060800000,
+            "value": "24.46.0"
+        },
+        {
+            "date": 1731456000000,
+            "value": "24.45.0"
+        },
+        {
+            "date": 1730851200000,
+            "value": "24.44.0"
+        },
+        {
+            "date": 1730246400000,
+            "value": "24.43.0"
+        },
+        {
+            "date": 1729641600000,
+            "value": "24.42.0"
+        },
+        {
+            "date": 1729296000000,
+            "value": "24.41.1"
+        },
+        {
+            "date": 1729036800000,
+            "value": "24.41.0"
+        },
+        {
+            "date": 1728432000000,
+            "value": "24.40.0"
+        },
+        {
+            "date": 1728000000000,
+            "value": "24.39.0"
+        },
+        {
+            "date": 1727222400000,
+            "value": "24.38.0"
+        },
+        {
+            "date": 1726617600000,
+            "value": "24.37.0"
+        },
+        {
+            "date": 1726099200000,
+            "value": "24.36.0"
+        },
+        {
+            "date": 1725408000000,
+            "value": "24.35.0"
+        },
+        {
+            "date": 1724803200000,
+            "value": "24.34.0"
+        },
+        {
+            "date": 1723593600000,
+            "value": "24.32.0"
+        },
+        {
+            "date": 1722988800000,
+            "value": "24.31.0"
+        },
+        {
+            "date": 1722384000000,
+            "value": "24.30.0"
+        },
+        {
+            "date": 1722038400000,
+            "value": "24.29.1"
+        },
+        {
+            "date": 1721779200000,
+            "value": "24.29.0"
+        },
+        {
+            "date": 1721174400000,
+            "value": "24.28.0"
+        },
+        {
+            "date": 1720569600000,
+            "value": "24.26.0"
+        },
+        {
+            "date": 1719360000000,
+            "value": "24.25.0"
+        },
+        {
+            "date": 1718841600000,
+            "value": "24.24.0"
+        },
+        {
+            "date": 1718150400000,
+            "value": "24.23.0"
+        },
+        {
+            "date": 1717545600000,
+            "value": "24.22.0"
+        },
+        {
+            "date": 1716940800000,
+            "value": "24.21.0"
+        },
+        {
+            "date": 1716336000000,
+            "value": "24.20.0"
+        },
+        {
+            "date": 1715126400000,
+            "value": "24.18.0"
+        },
+        {
+            "date": 1714521600000,
+            "value": "24.17.0"
+        },
+        {
+            "date": 1713916800000,
+            "value": "24.16.0"
+        },
+        {
+            "date": 1713312000000,
+            "value": "24.15.0"
+        },
+        {
+            "date": 1712707200000,
+            "value": "24.14.0"
+        },
+        {
+            "date": 1712102400000,
+            "value": "24.13.0"
+        },
+        {
+            "date": 1711497600000,
+            "value": "24.12.0"
+        },
+        {
+            "date": 1710892800000,
+            "value": "24.11.0"
+        },
+        {
+            "date": 1710288000000,
+            "value": "24.10.0"
+        },
+        {
+            "date": 1709683200000,
+            "value": "24.9.0"
+        },
+        {
+            "date": 1709078400000,
+            "value": "24.8.0"
+        },
+        {
+            "date": 1708473600000,
+            "value": "24.7.0"
+        },
+        {
+            "date": 1707868800000,
+            "value": "24.6.0"
+        },
+        {
+            "date": 1707350400000,
+            "value": "24.5.0"
+        },
+        {
+            "date": 1706832000000,
+            "value": "24.4.0"
+        },
+        {
+            "date": 1706054400000,
+            "value": "24.3.0"
+        },
+        {
+            "date": 1705449600000,
+            "value": "24.2.0"
+        },
+        {
+            "date": 1704844800000,
+            "value": "24.1.0"
+        },
+        {
+            "date": 1702425600000,
+            "value": "23.25.0"
+        },
+        {
+            "date": 1701820800000,
+            "value": "23.24.5"
+        },
+        {
+            "date": 1701216000000,
+            "value": "23.23.5"
+        },
+        {
+            "date": 1700006400000,
+            "value": "23.23.0"
+        },
+        {
+            "date": 1699401600000,
+            "value": "23.22.5"
+        },
+        {
+            "date": 1698969600000,
+            "value": "23.22.2"
+        },
+        {
+            "date": 1698796800000,
+            "value": "23.22.0"
+        },
+        {
+            "date": 1698278400000,
+            "value": "23.21.5"
+        },
+        {
+            "date": 1697587200000,
+            "value": "23.21.0"
+        },
+        {
+            "date": 1696982400000,
+            "value": "23.20.5"
+        },
+        {
+            "date": 1696377600000,
+            "value": "23.20.0"
+        },
+        {
+            "date": 1695772800000,
+            "value": "23.19.5"
+        },
+        {
+            "date": 1695168000000,
+            "value": "23.19.0"
+        },
+        {
+            "date": 1694563200000,
+            "value": "23.18.5"
+        },
+        {
+            "date": 1693958400000,
+            "value": "23.18.0"
+        },
+        {
+            "date": 1693353600000,
+            "value": "23.17.5"
+        },
+        {
+            "date": 1692144000000,
+            "value": "23.16.5"
+        },
+        {
+            "date": 1691539200000,
+            "value": "23.16.0"
+        },
+        {
+            "date": 1690934400000,
+            "value": "23.15.5"
+        },
+        {
+            "date": 1690329600000,
+            "value": "23.15.0"
+        },
+        {
+            "date": 1689724800000,
+            "value": "23.14.5"
+        },
+        {
+            "date": 1689033600000,
+            "value": "23.13.5"
+        },
+        {
+            "date": 1687996800000,
+            "value": "23.13.0"
+        },
+        {
+            "date": 1687392000000,
+            "value": "23.12.5"
+        },
+        {
+            "date": 1686182400000,
+            "value": "23.11.5"
+        },
+        {
+            "date": 1685577600000,
+            "value": "23.11.0"
+        },
+        {
+            "date": 1684886400000,
+            "value": "23.10.5"
+        },
+        {
+            "date": 1684281600000,
+            "value": "23.10.0"
+        },
+        {
+            "date": 1684108800000,
+            "value": "23.9.5"
+        },
+        {
+            "date": 1683072000000,
+            "value": "23.9.0"
+        },
+        {
+            "date": 1682467200000,
+            "value": "23.8.5"
+        },
+        {
+            "date": 1682294400000,
+            "value": "23.8.1"
+        },
+        {
+            "date": 1681862400000,
+            "value": "23.8.0"
+        },
+        {
+            "date": 1681344000000,
+            "value": "23.7.5"
+        },
+        {
+            "date": 1680480000000,
+            "value": "23.6.5"
+        },
+        {
+            "date": 1679443200000,
+            "value": "23.6.0"
+        },
+        {
+            "date": 1678924800000,
+            "value": "23.5.5"
+        },
+        {
+            "date": 1678320000000,
+            "value": "23.5.0"
+        },
+        {
+            "date": 1677196800000,
+            "value": "23.4.0"
+        },
+        {
+            "date": 1676505600000,
+            "value": "23.3.5"
+        },
+        {
+            "date": 1675900800000,
+            "value": "23.3.0"
+        },
+        {
+            "date": 1675036800000,
+            "value": "22.25.3"
+        },
+        {
+            "date": 1672272000000,
+            "value": "22.25.2"
+        },
+        {
+            "date": 1672099200000,
+            "value": "22.25.1"
+        },
+        {
+            "date": 1671494400000,
+            "value": "22.25.0"
+        },
+        {
+            "date": 1670371200000,
+            "value": "22.24.5"
+        },
+        {
+            "date": 1669852800000,
+            "value": "22.24.0"
+        },
+        {
+            "date": 1669593600000,
+            "value": "22.23.5"
+        },
+        {
+            "date": 1668556800000,
+            "value": "22.23.0"
+        },
+        {
+            "date": 1668038400000,
+            "value": "22.22.5"
+        },
+        {
+            "date": 1667433600000,
+            "value": "22.22.0"
+        },
+        {
+            "date": 1666742400000,
+            "value": "22.21.5"
+        },
+        {
+            "date": 1666224000000,
+            "value": "22.21.0"
+        },
+        {
+            "date": 1665964800000,
+            "value": "22.20.6"
+        },
+        {
+            "date": 1665532800000,
+            "value": "22.20.5"
+        },
+        {
+            "date": 1664928000000,
+            "value": "22.20.0"
+        },
+        {
+            "date": 1664323200000,
+            "value": "22.19.5"
+        },
+        {
+            "date": 1663804800000,
+            "value": "22.19.0"
+        },
+        {
+            "date": 1663113600000,
+            "value": "22.18.5"
+        },
+        {
+            "date": 1662940800000,
+            "value": "22.18.0"
+        },
+        {
+            "date": 1662076800000,
+            "value": "22.17.5"
+        },
+        {
+            "date": 1661731200000,
+            "value": "22.17.0"
+        },
+        {
+            "date": 1660694400000,
+            "value": "22.16.5"
+        },
+        {
+            "date": 1660176000000,
+            "value": "22.16.0"
+        },
+        {
+            "date": 1659571200000,
+            "value": "22.15.5"
+        },
+        {
+            "date": 1658880000000,
+            "value": "22.15.0"
+        },
+        {
+            "date": 1658707200000,
+            "value": "22.14.6"
+        },
+        {
+            "date": 1658275200000,
+            "value": "22.14.5"
+        },
+        {
+            "date": 1656547200000,
+            "value": "22.13.0"
+        },
+        {
+            "date": 1655856000000,
+            "value": "22.12.5"
+        },
+        {
+            "date": 1655769600000,
+            "value": "22.12.0"
+        },
+        {
+            "date": 1654214400000,
+            "value": "22.11.0"
+        },
+        {
+            "date": 1653523200000,
+            "value": "22.10.5"
+        },
+        {
+            "date": 1652832000000,
+            "value": "22.10.0"
+        },
+        {
+            "date": 1652313600000,
+            "value": "22.9.5"
+        },
+        {
+            "date": 1651708800000,
+            "value": "22.9.0"
+        },
+        {
+            "date": 1651449600000,
+            "value": "22.8.5"
+        },
+        {
+            "date": 1650412800000,
+            "value": "22.8.0"
+        },
+        {
+            "date": 1649808000000,
+            "value": "22.7.5"
+        },
+        {
+            "date": 1649203200000,
+            "value": "22.7.0"
+        },
+        {
+            "date": 1648598400000,
+            "value": "22.6.5"
+        },
+        {
+            "date": 1648080000000,
+            "value": "22.6.0"
+        },
+        {
+            "date": 1647388800000,
+            "value": "22.5.5"
+        },
+        {
+            "date": 1646870400000,
+            "value": "22.5.0"
+        },
+        {
+            "date": 1646611200000,
+            "value": "22.4.5"
+        },
+        {
+            "date": 1644796800000,
+            "value": "22.3.5"
+        },
+        {
+            "date": 1644192000000,
+            "value": "22.3.0"
+        },
+        {
+            "date": 1642550400000,
+            "value": "21.25.7"
+        },
+        {
+            "date": 1640563200000,
+            "value": "21.25.6"
+        },
+        {
+            "date": 1639958400000,
+            "value": "21.25.5"
+        },
+        {
+            "date": 1638316800000,
+            "value": "21.23.5"
+        },
+        {
+            "date": 1637020800000,
+            "value": "21.23.0"
+        },
+        {
+            "date": 1636329600000,
+            "value": "21.22.5"
+        },
+        {
+            "date": 1635811200000,
+            "value": "21.22.0"
+        },
+        {
+            "date": 1635724800000,
+            "value": "21.21.5"
+        },
+        {
+            "date": 1634688000000,
+            "value": "21.21.0"
+        },
+        {
+            "date": 1634515200000,
+            "value": "21.20.0"
+        },
+        {
+            "date": 1632700800000,
+            "value": "21.19.5"
+        },
+        {
+            "date": 1631491200000,
+            "value": "21.18.5"
+        },
+        {
+            "date": 1631232000000,
+            "value": "21.18.0"
+        },
+        {
+            "date": 1630972800000,
+            "value": "21.17.5"
+        },
+        {
+            "date": 1629849600000,
+            "value": "21.17.0"
+        },
+        {
+            "date": 1629072000000,
+            "value": "21.16.5"
+        },
+        {
+            "date": 1628467200000,
+            "value": "21.16.0"
+        },
+        {
+            "date": 1627948800000,
+            "value": "21.15.5"
+        },
+        {
+            "date": 1627430400000,
+            "value": "21.15.0"
+        },
+        {
+            "date": 1626739200000,
+            "value": "21.14.5"
+        },
+        {
+            "date": 1626048000000,
+            "value": "21.14.0"
+        },
+        {
+            "date": 1625616000000,
+            "value": "21.13.0"
+        },
+        {
+            "date": 1624492800000,
+            "value": "21.9.6"
+        },
+        {
+            "date": 1621296000000,
+            "value": "21.9.5"
+        },
+        {
+            "date": 1620086400000,
+            "value": "21.9.0"
+        },
+        {
+            "date": 1619395200000,
+            "value": "21.8.5"
+        },
+        {
+            "date": 1618790400000,
+            "value": "21.8.0"
+        },
+        {
+            "date": 1618185600000,
+            "value": "21.7.5"
+        },
+        {
+            "date": 1617580800000,
+            "value": "21.7.0"
+        },
+        {
+            "date": 1616976000000,
+            "value": "21.6.5"
+        },
+        {
+            "date": 1616371200000,
+            "value": "21.6.0"
+        },
+        {
+            "date": 1615766400000,
+            "value": "21.5.3"
+        },
+        {
+            "date": 1615161600000,
+            "value": "21.5.0"
+        },
+        {
+            "date": 1614729600000,
+            "value": "21.4.6"
+        },
+        {
+            "date": 1614643200000,
+            "value": "21.4.5"
+        },
+        {
+            "date": 1613952000000,
+            "value": "21.4.0"
+        },
+        {
+            "date": 1613433600000,
+            "value": "21.3.5"
+        },
+        {
+            "date": 1609113600000,
+            "value": "20.24.7"
+        },
+        {
+            "date": 1608249600000,
+            "value": "20.24.6"
+        },
+        {
+            "date": 1607299200000,
+            "value": "20.24.5"
+        },
+        {
+            "date": 1606780800000,
+            "value": "20.24.0"
+        },
+        {
+            "date": 1606089600000,
+            "value": "20.23.5"
+        },
+        {
+            "date": 1605484800000,
+            "value": "20.23.0"
+        },
+        {
+            "date": 1604880000000,
+            "value": "20.22.5"
+        },
+        {
+            "date": 1604275200000,
+            "value": "20.22.0"
+        },
+        {
+            "date": 1603065600000,
+            "value": "20.21.0"
+        },
+        {
+            "date": 1602460800000,
+            "value": "20.20.5"
+        },
+        {
+            "date": 1601856000000,
+            "value": "20.20.0"
+        },
+        {
+            "date": 1601251200000,
+            "value": "20.19.5"
+        },
+        {
+            "date": 1600819200000,
+            "value": "20.19.1"
+        },
+        {
+            "date": 1600646400000,
+            "value": "20.19.0"
+        },
+        {
+            "date": 1599868800000,
+            "value": "20.18.1"
+        },
+        {
+            "date": 1599436800000,
+            "value": "20.18.0"
+        },
+        {
+            "date": 1598832000000,
+            "value": "20.17.1"
+        },
+        {
+            "date": 1597622400000,
+            "value": "20.16.0"
+        },
+        {
+            "date": 1596585600000,
+            "value": "20.15.1"
+        },
+        {
+            "date": 1596412800000,
+            "value": "20.15.0"
+        },
+        {
+            "date": 1595203200000,
+            "value": "20.14.0"
+        },
+        {
+            "date": 1594684800000,
+            "value": "20.13.0"
+        },
+        {
+            "date": 1593475200000,
+            "value": "20.12.0"
+        },
+        {
+            "date": 1592265600000,
+            "value": "20.11.0"
+        },
+        {
+            "date": 1591401600000,
+            "value": "20.10.1"
+        },
+        {
+            "date": 1591142400000,
+            "value": "20.10.0"
+        },
+        {
+            "date": 1589760000000,
+            "value": "20.9.0"
+        },
+        {
+            "date": 1588809600000,
+            "value": "20.8.1"
+        },
+        {
+            "date": 1588550400000,
+            "value": "20.8.0"
+        },
+        {
+            "date": 1587513600000,
+            "value": "20.7.0"
+        },
+        {
+            "date": 1586736000000,
+            "value": "20.6.0"
+        },
+        {
+            "date": 1584057600000,
+            "value": "20.5.0"
+        },
+        {
+            "date": 1583366400000,
+            "value": "20.4.1"
+        },
+        {
+            "date": 1583193600000,
+            "value": "20.4.0"
+        },
+        {
+            "date": 1582070400000,
+            "value": "20.3.0"
+        },
+        {
+            "date": 1581379200000,
+            "value": "20.2.0"
+        },
+        {
+            "date": 1578441600000,
+            "value": "19.12.6"
+        },
+        {
+            "date": 1578268800000,
+            "value": "19.12.5"
+        },
+        {
+            "date": 1576800000000,
+            "value": "19.12.0"
+        },
+        {
+            "date": 1576454400000,
+            "value": "19.11.5"
+        },
+        {
+            "date": 1575417600000,
+            "value": "19.11.0"
+        },
+        {
+            "date": 1574208000000,
+            "value": "19.10.5"
+        },
+        {
+            "date": 1573084800000,
+            "value": "19.10.1"
+        },
+        {
+            "date": 1572998400000,
+            "value": "19.10.0"
+        },
+        {
+            "date": 1572220800000,
+            "value": "19.9.11"
+        },
+        {
+            "date": 1570406400000,
+            "value": "19.9.10"
+        },
+        {
+            "date": 1569888000000,
+            "value": "19.9.7"
+        },
+        {
+            "date": 1569628800000,
+            "value": "19.9.6"
+        },
+        {
+            "date": 1569456000000,
+            "value": "19.9.5"
+        },
+        {
+            "date": 1568764800000,
+            "value": "19.9.0"
+        },
+        {
+            "date": 1568073600000,
+            "value": "19.8.10"
+        },
+        {
+            "date": 1567123200000,
+            "value": "19.8.7"
+        },
+        {
+            "date": 1567036800000,
+            "value": "19.8.6"
+        },
+        {
+            "date": 1566864000000,
+            "value": "19.8.5"
+        },
+        {
+            "date": 1565568000000,
+            "value": "19.8.0"
+        },
+        {
+            "date": 1564358400000,
+            "value": "19.7.1"
+        },
+        {
+            "date": 1563926400000,
+            "value": "19.7.0"
+        },
+        {
+            "date": 1562544000000,
+            "value": "19.6.10"
+        },
+        {
+            "date": 1561075200000,
+            "value": "19.6.5"
+        },
+        {
+            "date": 1559952000000,
+            "value": "19.6.1"
+        },
+        {
+            "date": 1559606400000,
+            "value": "19.6.0"
+        },
+        {
+            "date": 1559001600000,
+            "value": "19.5.5"
+        },
+        {
+            "date": 1557705600000,
+            "value": "19.5.0"
+        },
+        {
+            "date": 1556755200000,
+            "value": "19.4.5"
+        },
+        {
+            "date": 1556582400000,
+            "value": "19.4.2"
+        },
+        {
+            "date": 1555545600000,
+            "value": "19.4.1"
+        },
+        {
+            "date": 1555372800000,
+            "value": "19.4.0"
+        },
+        {
+            "date": 1554336000000,
+            "value": "19.3.6"
+        },
+        {
+            "date": 1554163200000,
+            "value": "19.3.5"
+        },
+        {
+            "date": 1552521600000,
+            "value": "19.3.0"
+        },
+        {
+            "date": 1551312000000,
+            "value": "19.2.5"
+        },
+        {
+            "date": 1550966400000,
+            "value": "19.2.2"
+        },
+        {
+            "date": 1550793600000,
+            "value": "19.2.1"
+        },
+        {
+            "date": 1550102400000,
+            "value": "19.2.0"
+        },
+        {
+            "date": 1549238400000,
+            "value": "19.1.5"
+        },
+        {
+            "date": 1548115200000,
+            "value": "19.1.0"
+        },
+        {
+            "date": 1545004800000,
+            "value": "18.12.0"
+        },
+        {
+            "date": 1543881600000,
+            "value": "18.11.5"
+        },
+        {
+            "date": 1543190400000,
+            "value": "18.11.0"
+        },
+        {
+            "date": 1541635200000,
+            "value": "18.10.10"
+        },
+        {
+            "date": 1540425600000,
+            "value": "18.10.5"
+        },
+        {
+            "date": 1539043200000,
+            "value": "18.10.0"
+        },
+        {
+            "date": 1536796800000,
+            "value": "18.9.1"
+        },
+        {
+            "date": 1535414400000,
+            "value": "18.8.5"
+        },
+        {
+            "date": 1533686400000,
+            "value": "18.8.0"
+        },
+        {
+            "date": 1532908800000,
+            "value": "18.7.5"
+        },
+        {
+            "date": 1531699200000,
+            "value": "18.7.0"
+        },
+        {
+            "date": 1530230400000,
+            "value": "18.6.6"
+        },
+        {
+            "date": 1529971200000,
+            "value": "18.6.5"
+        },
+        {
+            "date": 1528848000000,
+            "value": "18.6.0"
+        },
+        {
+            "date": 1527552000000,
+            "value": "7.37.1"
+        },
+        {
+            "date": 1526428800000,
+            "value": "7.37"
+        },
+        {
+            "date": 1524096000000,
+            "value": "7.36"
+        },
+        {
+            "date": 1522800000000,
+            "value": "7.35"
+        },
+        {
+            "date": 1521504000000,
+            "value": "7.34"
+        },
+        {
+            "date": 1520380800000,
+            "value": "7.33"
+        },
+        {
+            "date": 1519257600000,
+            "value": "7.32"
+        },
+        {
+            "date": 1518048000000,
+            "value": "7.31"
+        },
+        {
+            "date": 1517270400000,
+            "value": "7.30.1"
+        },
+        {
+            "date": 1517184000000,
+            "value": "7.30"
+        },
+        {
+            "date": 1513209600000,
+            "value": "7.29.1"
+        },
+        {
+            "date": 1512432000000,
+            "value": "7.29"
+        },
+        {
+            "date": 1511136000000,
+            "value": "7.28"
+        },
+        {
+            "date": 1509494400000,
+            "value": "7.27"
+        },
+        {
+            "date": 1508284800000,
+            "value": "7.26"
+        },
+        {
+            "date": 1507075200000,
+            "value": "7.25"
+        },
+        {
+            "date": 1506556800000,
+            "value": "7.24.1"
+        },
+        {
+            "date": 1506038400000,
+            "value": "7.24"
+        },
+        {
+            "date": 1504742400000,
+            "value": "7.23"
+        },
+        {
+            "date": 1503360000000,
+            "value": "7.22"
+        },
+        {
+            "date": 1502064000000,
+            "value": "7.21"
+        },
+        {
+            "date": 1501545600000,
+            "value": "7.20.2"
+        },
+        {
+            "date": 1501459200000,
+            "value": "7.20.1"
+        },
+        {
+            "date": 1501027200000,
+            "value": "7.20"
+        },
+        {
+            "date": 1500249600000,
+            "value": "7.19"
+        },
+        {
+            "date": 1499212800000,
+            "value": "7.18"
+        },
+        {
+            "date": 1497225600000,
+            "value": "7.17"
+        },
+        {
+            "date": 1496188800000,
+            "value": "7.16"
+        },
+        {
+            "date": 1494806400000,
+            "value": "7.15"
+        },
+        {
+            "date": 1493683200000,
+            "value": "7.14"
+        },
+        {
+            "date": 1493164800000,
+            "value": "7.13.1"
+        },
+        {
+            "date": 1492560000000,
+            "value": "7.13"
+        },
+        {
+            "date": 1491782400000,
+            "value": "7.12.1"
+        },
+        {
+            "date": 1491264000000,
+            "value": "7.12"
+        },
+        {
+            "date": 1490659200000,
+            "value": "7.11"
+        },
+        {
+            "date": 1488931200000,
+            "value": "7.10"
+        },
+        {
+            "date": 1488326400000,
+            "value": "7.9"
+        },
+        {
+            "date": 1487030400000,
+            "value": "7.8"
+        },
+        {
+            "date": 1486425600000,
+            "value": "7.7.2"
+        },
+        {
+            "date": 1485475200000,
+            "value": "7.7.1"
+        },
+        {
+            "date": 1485302400000,
+            "value": "7.7"
+        },
+        {
+            "date": 1482883200000,
+            "value": "7.6.3"
+        },
+        {
+            "date": 1482278400000,
+            "value": "7.6.2"
+        },
+        {
+            "date": 1481500800000,
+            "value": "7.6.1"
+        },
+        {
+            "date": 1480550400000,
+            "value": "7.6"
+        },
+        {
+            "date": 1479513600000,
+            "value": "7.5.2"
+        },
+        {
+            "date": 1479340800000,
+            "value": "7.5.1"
+        },
+        {
+            "date": 1478736000000,
+            "value": "7.5"
+        },
+        {
+            "date": 1477612800000,
+            "value": "7.4.1"
+        },
+        {
+            "date": 1477008000000,
+            "value": "7.4"
+        },
+        {
+            "date": 1475452800000,
+            "value": "7.3"
+        },
+        {
+            "date": 1475020800000,
+            "value": "7.2.2"
+        },
+        {
+            "date": 1474848000000,
+            "value": "7.2.1"
+        },
+        {
+            "date": 1473984000000,
+            "value": "7.2"
+        },
+        {
+            "date": 1472774400000,
+            "value": "7.1.1"
+        },
+        {
+            "date": 1471996800000,
+            "value": "7.1"
+        },
+        {
+            "date": 1469404800000,
+            "value": "7.0"
+        },
+        {
+            "date": 1467676800000,
+            "value": "6.20"
+        },
+        {
+            "date": 1466985600000,
+            "value": "6.19.2"
+        },
+        {
+            "date": 1466380800000,
+            "value": "6.19.1"
+        },
+        {
+            "date": 1466121600000,
+            "value": "6.19"
+        },
+        {
+            "date": 1465171200000,
+            "value": "6.18.1"
+        },
+        {
+            "date": 1464220800000,
+            "value": "6.18"
+        },
+        {
+            "date": 1462320000000,
+            "value": "6.17.1"
+        },
+        {
+            "date": 1462147200000,
+            "value": "6.17"
+        },
+        {
+            "date": 1460937600000,
+            "value": "6.16"
+        },
+        {
+            "date": 1459900800000,
+            "value": "6.15"
+        },
+        {
+            "date": 1458172800000,
+            "value": "6.14.1"
+        },
+        {
+            "date": 1456790400000,
+            "value": "6.14"
+        },
+        {
+            "date": 1455062400000,
+            "value": "6.13"
+        },
+        {
+            "date": 1453766400000,
+            "value": "6.12"
+        },
+        {
+            "date": 1452556800000,
+            "value": "6.11.2"
+        },
+        {
+            "date": 1450569600000,
+            "value": "6.11.1"
+        },
+        {
+            "date": 1449792000000,
+            "value": "6.11"
+        },
+        {
+            "date": 1447804800000,
+            "value": "6.10"
+        },
+        {
+            "date": 1447286400000,
+            "value": "6.9"
+        },
+        {
+            "date": 1445472000000,
+            "value": "6.8.2"
+        },
+        {
+            "date": 1444953600000,
+            "value": "6.8.1"
+        },
+        {
+            "date": 1444608000000,
+            "value": "6.8"
+        },
+        {
+            "date": 1442793600000,
+            "value": "6.7"
+        },
+        {
+            "date": 1440979200000,
+            "value": "6.6.1"
+        },
+        {
+            "date": 1440720000000,
+            "value": "6.6"
+        },
+        {
+            "date": 1438819200000,
+            "value": "6.5"
+        },
+        {
+            "date": 1437609600000,
+            "value": "6.4"
+        },
+        {
+            "date": 1436227200000,
+            "value": "6.3"
+        },
+        {
+            "date": 1434931200000,
+            "value": "6.2"
+        },
+        {
+            "date": 1434067200000,
+            "value": "6.1.1"
+        },
+        {
+            "date": 1431648000000,
+            "value": "6.0.1"
+        },
+        {
+            "date": 1430438400000,
+            "value": "6.0"
+        },
+        {
+            "date": 1430092800000,
+            "value": "5.14"
+        },
+        {
+            "date": 1429488000000,
+            "value": "5.13"
+        },
+        {
+            "date": 1427932800000,
+            "value": "5.12"
+        },
+        {
+            "date": 1426809600000,
+            "value": "5.11.1"
+        },
+        {
+            "date": 1425945600000,
+            "value": "5.11"
+        },
+        {
+            "date": 1424649600000,
+            "value": "5.9.1"
+        },
+        {
+            "date": 1423440000000,
+            "value": "5.9"
+        },
+        {
+            "date": 1422057600000,
+            "value": "5.8.3"
+        },
+        {
+            "date": 1421107200000,
+            "value": "5.8.2"
+        },
+        {
+            "date": 1420243200000,
+            "value": "5.8.1"
+        },
+        {
+            "date": 1418169600000,
+            "value": "5.8"
+        },
+        {
+            "date": 1416182400000,
+            "value": "5.7.3"
+        },
+        {
+            "date": 1415664000000,
+            "value": "5.7.2"
+        },
+        {
+            "date": 1414713600000,
+            "value": "5.7.1"
+        },
+        {
+            "date": 1413244800000,
+            "value": "5.7"
+        },
+        {
+            "date": 1412294400000,
+            "value": "5.6.7"
+        },
+        {
+            "date": 1411689600000,
+            "value": "5.6.6"
+        },
+        {
+            "date": 1410912000000,
+            "value": "5.6.3"
+        },
+        {
+            "date": 1410393600000,
+            "value": "5.6"
+        },
+        {
+            "date": 1408060800000,
+            "value": "5.5.1"
+        },
+        {
+            "date": 1407110400000,
+            "value": "5.5"
+        },
+        {
+            "date": 1404604800000,
+            "value": "5.4.1"
+        },
+        {
+            "date": 1404086400000,
+            "value": "5.4"
+        },
+        {
+            "date": 1402531200000,
+            "value": "5.3.2"
+        },
+        {
+            "date": 1402012800000,
+            "value": "5.3.1"
+        },
+        {
+            "date": 1401148800000,
+            "value": "5.3"
+        },
+        {
+            "date": 1399420800000,
+            "value": "5.2.2"
+        },
+        {
+            "date": 1399075200000,
+            "value": "5.2.1"
+        },
+        {
+            "date": 1398902400000,
+            "value": "5.2"
+        },
+        {
+            "date": 1396396800000,
+            "value": "5.1.1"
+        },
+        {
+            "date": 1395705600000,
+            "value": "5.1"
+        },
+        {
+            "date": 1394064000000,
+            "value": "5.0.2"
+        },
+        {
+            "date": 1393459200000,
+            "value": "5.0.1"
+        },
+        {
+            "date": 1393200000000,
+            "value": "5.0"
+        },
+        {
+            "date": 1390953600000,
+            "value": "4.2.3"
+        },
+        {
+            "date": 1389571200000,
+            "value": "4.2.2"
+        },
+        {
+            "date": 1388966400000,
+            "value": "4.2.1"
+        },
+        {
+            "date": 1388102400000,
+            "value": "4.2"
+        },
+        {
+            "date": 1386979200000,
+            "value": "4.1"
+        },
+        {
+            "date": 1384128000000,
+            "value": "4.0.3"
+        },
+        {
+            "date": 1382918400000,
+            "value": "4.0.2"
+        },
+        {
+            "date": 1382054400000,
+            "value": "4.0.1"
+        },
+        {
+            "date": 1381276800000,
+            "value": "4.0"
+        },
+        {
+            "date": 1376352000000,
+            "value": "3.8.4"
+        },
+        {
+            "date": 1374105600000,
+            "value": "3.8.3"
+        },
+        {
+            "date": 1372723200000,
+            "value": "3.8.2"
+        },
+        {
+            "date": 1371427200000,
+            "value": "3.8"
+        },
+        {
+            "date": 1358467200000,
+            "value": "3.7.1"
+        },
+        {
+            "date": 1356825600000,
+            "value": "3.7"
+        },
+        {
+            "date": 1355443200000,
+            "value": "3.6"
+        },
+        {
+            "date": 1350345600000,
+            "value": "3.5"
+        },
+        {
+            "date": 1348617600000,
+            "value": "3.4.1"
+        },
+        {
+            "date": 1347408000000,
+            "value": "3.4"
+        },
+        {
+            "date": 1322611200000,
+            "value": "3.3.1"
+        },
+        {
+            "date": 1321228800000,
+            "value": "3.3"
+        },
+        {
+            "date": 1311638400000,
+            "value": "3.2.1"
+        },
+        {
+            "date": 1310083200000,
+            "value": "3.2"
+        },
+        {
+            "date": 1300060800000,
+            "value": "3.1"
+        },
+        {
+            "date": 1292630400000,
+            "value": "3.0"
+        },
+        {
+            "date": 1288051200000,
+            "value": "2.8"
+        },
+        {
+            "date": 1286841600000,
+            "value": "2.7"
+        },
+        {
+            "date": 1282262400000,
+            "value": "2.6"
+        },
+        {
+            "date": 1280361600000,
+            "value": "2.5"
+        },
+        {
+            "date": 1280188800000,
+            "value": "2.4"
+        },
+        {
+            "date": 1277164800000,
+            "value": "2.3"
+        },
+        {
+            "date": 1275436800000,
+            "value": "2.2"
+        },
+        {
+            "date": 1274832000000,
+            "value": "2.0.2"
+        },
+        {
+            "date": 1274140800000,
+            "value": "2.0.1"
+        },
+        {
+            "date": 1273536000000,
+            "value": "2.0"
+        },
+        {
+            "date": 1261094400000,
+            "value": "1.1"
+        },
+        {
+            "date": 1260230400000,
+            "value": "1.0"
+        }
+    ],
+    "feature_graphic": null,
+    "screenshots": {
+        "iphone": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/73/99/b9/7399b9e0-cf81-aa7b-8d31-07464f373c45/MyFitnesPal_Myfitnespal_US_iOS_U002bGP_Screenshot_Mockups_250401_01__U00281_U0029.png/1290x2796bb.png",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b7/97/29/b7972915-5111-9a3c-a3ae-8779dd730dee/MyFitnesPal_Myfitnespal_US_iOS_U002bGP_Screenshot_Mockups_250401_02__U00281_U0029.png/1290x2796bb.png",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/53/b9/62/53b9624e-a4cb-3671-81fc-8c85c0945348/MyFitnesPal_Myfitnespal_US_iOS_U002bGP_Screenshot_Mockups_250305_03.png/1290x2796bb.png",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/5d/bc/e0/5dbce007-dd9e-0a32-8992-c3eb14b09560/MyFitnesPal_Myfitnespal_US_iOS_U002bGP_Screenshot_Mockups_250401_07_Evergreen__U00281_U0029.png/1290x2796bb.png",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9f/3f/a7/9f3fa781-878b-96fa-b65b-7aac16d33b96/MyFitnesPal_Myfitnespal_US_iOS_U002bGP_Screenshot_Mockups_250305_04.png/1290x2796bb.png",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b9/ea/34/b9ea34f3-a69a-c44e-3a32-fa951a7838dc/MyFitnesPal_Myfitnespal_US_iOS_U002bGP_Screenshot_Mockups_250305_06.png/1290x2796bb.png",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/31/2e/01/312e0127-1b21-3065-91f9-1334ef348eea/MyFitnesPal_Myfitnespal_US_iOS_U002bGP_Screenshot_Revisions_250415_08__U00281_U0029.png/1290x2796bb.png",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a0/3c/a7/a03ca7d1-9a0a-13e4-dc30-35e9c9634b4f/MyFitnesPal_Myfitnespal_US_iOS_U002bGP_Screenshot_Mockups_250305_05.png/1290x2796bb.png",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/08/b3/cc/08b3cc67-009e-a9ef-933b-0f3b4461c822/MyFitnesPal_Myfitnespal_US_iOS_U002bGP_Screenshot_Mockups_250305_08.png/1290x2796bb.png",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4e/0e/94/4e0e94c5-fd69-c7cb-5eff-059a582d74d6/MyFitnesPal_Myfitnespal_US_iOS_U002bGP_Screenshot_Mockups_250305_09.png/1290x2796bb.png"
+        ],
+        "ipad": [],
+        "iwatch": [
+            "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fb/fd/68/fbfd6861-2797-eb9a-ad54-da9f5e49018a/mzl.tzumioph.png/312x390bb.png",
+            "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0f/af/00/0faf0059-7cd8-69d4-b5ea-7deec098f261/mzl.quxoqeoy.png/312x390bb.png",
+            "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/66/95/b3/6695b36f-716f-0d05-0b01-42e0d21ed829/mzl.vynczizi.png/312x390bb.png"
+        ],
+        "imessage_iphone": [],
+        "imessage_ipad": []
+    },
+    "trailers": {
+        "iphone": {},
+        "ipad": {}
+    },
+    "active": true,
+    "advertised_on_any_network": {
+        "value": "Active",
+        "name": "Advertised on Any Network",
+        "custom_fields_filter_id": {
+            "errors": [
+                "Invalid params values: [\"Active\"], name: \"Advertised on Any Network\""
+            ]
+        }
+    },
+    "categories": [
+        {
+            "name": "Health & Fitness",
+            "id": 6013
+        },
+        {
+            "name": "Food & Drink",
+            "id": 6023
+        }
+    ],
+    "content_rating": "17+",
+    "description": {
+        "full_description": "Track progress toward your nutrition, water, fitness, and weight loss goals with MyFitnessPal. This all-in-one food tracker and health app is like having a nutrition coach, meal planner, and food diary with you at all times.<br><br>MyFitnessPal isn’t another restrictive diet app. This is a health app to help you learn about your habits … see how you eat … make smarter food choices … find motivation & support ... and conquer your health goals.<br><br>Download and start your free 30-day Premium trial to access exclusive food tracking, fitness logging tools, and expert guidance. You’ll soon discover why MyFitnessPal is the #1 food and nutrition tracker in the U.S., a GQ 2020 Fitness Awards “Best Fitness App,” and has been featured in the New York Times, Wall Street Journal, the Today Show, and U.S. News & World Report.<br><br>SO MUCH MORE THAN A CALORIE TRACKER & FOOD JOURNAL<br><br>It’s like having a dietitian, personal trainer, and nutrition coach at your fingertips.<br><br>Log Food – Easy-to-use tools make food tracking quick and simple<br>Record Activity – Add workouts and steps with the fitness tracker<br>Customize Your Goals – Weight loss, weight gain, weight maintenance, nutrition & fitness<br>See Your Progress – Track at a glance, or analyze nutrition & calories in detail<br>Learn From a Registered Dietitian – Meal Plans customized for your target calories, whether you want to lose or gain weight—with access to our Meal Planner tool<br>Stay Inspired – 500+ healthy goal-focused recipes and 50 workouts keep routines fresh and fun<br>Connect With Community – Find friends and motivation in our active forums<br><br>A CLOSER LOOK AT FEATURES & BENEFITS<br><br>Gain Valuable Insights Through Food Logging<br><br>Discover which foods fuel you best. It’s not just a diet app, calorie counter to lose weight, or a faster way to fat loss—it’s about holding yourself accountable and understanding what you put in your body.<br><br>One of the Largest Food Databases – Track calories in over 14 million foods (including restaurant dishes)<br>Fast & Easy Food Tracker Tools – Type to search, add foods from your history, or quick-add calories<br>Bar Code & Meal Scan: Log store-bought foods and entire meals using your phone’s camera<br>Calorie Tracker – Automatically count calories and see your daily progress<br>Macro Tracker – See carbs, fat & protein breakdown by gram or percentage—no need for a separate carb tracker or keto diet app!<br>Nutrition Tracker and Insights – Analyze nutrition intake and set specific goals for macros, cholesterol, sodium, fiber & more<br>Water Logging – Easily keep track of your water intake. <br><br>Customize Your App Experience<br><br>Choose settings that help you achieve your goals.<br><br>Custom Goals – Track calories by meal or day, set up macro goals & more<br>Personalized Dashboards – Pick stats you want to see at a glance<br>Net Carbs Mode/Carb Tracker – To simplify a low carb or keto diet, view net (not total) carbs<br>Protein Counter – Set your protein goals and track how much you eat during the day<br>Add Your Own Foods/Meal Tracker – Save recipes and meals for quick logging<br>Connect 50+ Apps & Devices – From fitness tracker and smartwatch apps, including the Health app<br>Track With Apple Watch – A calorie tracker, water tracker, and macro tracker on your watch face.",
+        "app_summary": "MyFitnessPal, published by a US-based company and offers in-app purchases ranging from $9.99 to $99.99 per item. The app was last updated on 15 July 2025. Released in US on 08 December 2009 and globally on 08 December 2009. MyFitnessPal belongs to the 'Health & Fitness' category maintaining a content rating of '17+'. In US, MyFitnessPal ranked 6th on the 'Top Free iPad Apps' chart, 7th on the 'Top Free iPhone Apps' chart, and 1st on the 'Top Grossing iPhone Apps' chart in the 'Health & Fitness' category. Last month's estimates were 1m downloads and $14m revenue. The app is available in US, United Kingdom, and Canada and being advertised actively. Sign up / Sign in to learn more about the time spent, session durations, usage & engagement (DAU, WAU, MAU), retention, churn, marketshare, growth trends, and other market statistics.",
+        "subtitle": "Track Food, Macros & Nutrition",
+        "promo_text": ""
+    },
+    "has_in_app_purchases": true,
+    "installs": null,
+    "language": "EN",
+    "support_url": "http://www.myfitnesspal.com/help",
+    "top_countries": [
+        "US",
+        "GB",
+        "CA"
+    ],
+    "valid_countries": [
+        "AE",
+        "AO",
+        "AR",
+        "AT",
+        "AU",
+        "AZ",
+        "BE",
+        "BF",
+        "BG",
+        "BH",
+        "BJ",
+        "BO",
+        "BR",
+        "CA",
+        "CG",
+        "CH",
+        "CI",
+        "CL",
+        "CM",
+        "CO",
+        "CR",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "DO",
+        "DZ",
+        "EC",
+        "EE",
+        "EG",
+        "ES",
+        "FI",
+        "FR",
+        "GB",
+        "GE",
+        "GH",
+        "GR",
+        "GT",
+        "HK",
+        "HR",
+        "HU",
+        "ID",
+        "IE",
+        "IL",
+        "IN",
+        "IQ",
+        "IT",
+        "JO",
+        "JP",
+        "KE",
+        "KH",
+        "KR",
+        "KW",
+        "KZ",
+        "LA",
+        "LB",
+        "LK",
+        "LT",
+        "LU",
+        "LV",
+        "LY",
+        "MA",
+        "ML",
+        "MM",
+        "MO",
+        "MT",
+        "MX",
+        "MY",
+        "MZ",
+        "NG",
+        "NI",
+        "NL",
+        "NO",
+        "NZ",
+        "OM",
+        "PA",
+        "PE",
+        "PH",
+        "PK",
+        "PL",
+        "PT",
+        "PY",
+        "QA",
+        "RO",
+        "RS",
+        "SA",
+        "SE",
+        "SG",
+        "SI",
+        "SK",
+        "SN",
+        "SV",
+        "TH",
+        "TN",
+        "TR",
+        "TW",
+        "TZ",
+        "UA",
+        "UG",
+        "US",
+        "UY",
+        "UZ",
+        "VE",
+        "VN",
+        "YE",
+        "ZA",
+        "ZM",
+        "ZW"
+    ],
+    "available_countries": [
+        "DZ",
+        "AO",
+        "AZ",
+        "BB",
+        "BY",
+        "BM",
+        "BG",
+        "GH",
+        "KE",
+        "MG",
+        "NG",
+        "OM",
+        "TN",
+        "UA",
+        "UZ",
+        "US",
+        "AU",
+        "CA",
+        "CN",
+        "FR",
+        "DE",
+        "GB",
+        "IT",
+        "JP",
+        "KR",
+        "RU",
+        "AR",
+        "AT",
+        "BE",
+        "BR",
+        "CL",
+        "CO",
+        "CR",
+        "HR",
+        "CZ",
+        "DK",
+        "DO",
+        "EC",
+        "EG",
+        "SV",
+        "FI",
+        "GR",
+        "GT",
+        "HK",
+        "HU",
+        "IN",
+        "ID",
+        "IE",
+        "IL",
+        "KZ",
+        "KW",
+        "LB",
+        "LT",
+        "LU",
+        "MO",
+        "MY",
+        "MX",
+        "NL",
+        "NZ",
+        "NO",
+        "PK",
+        "PA",
+        "PE",
+        "PH",
+        "PL",
+        "PT",
+        "QA",
+        "RO",
+        "SA",
+        "SG",
+        "SK",
+        "SI",
+        "ZA",
+        "ES",
+        "LK",
+        "SE",
+        "CH",
+        "TW",
+        "TH",
+        "TR",
+        "AE",
+        "UY",
+        "VE",
+        "VN",
+        "BO",
+        "KH",
+        "EE",
+        "LV",
+        "NI",
+        "PY",
+        "AF",
+        "GE",
+        "IQ",
+        "LY",
+        "MA",
+        "MZ",
+        "MM",
+        "YE",
+        "BH",
+        "CY",
+        "MT",
+        "RS",
+        "BJ",
+        "BF",
+        "CM",
+        "CG",
+        "CI",
+        "JO",
+        "LA",
+        "ML",
+        "SN",
+        "TZ",
+        "UG",
+        "ZM",
+        "ZW"
+    ],
+    "pre_order_countries": [],
+    "website_url": "http://www.myfitnesspal.com/",
+    "app_id": 341232718,
+    "app_view_url": "/ios/us/myfitnesspal-inc/app/myfitnesspal-calorie-counter/341232718/",
+    "country": "US",
+    "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0e/a3/18/0ea3187a-7023-2f9e-2a0c-e05decc49049/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/150x150bb.jpg",
+    "name": "MyFitnessPal: Calorie Counter",
+    "os": "ios",
+    "price": {
+        "currency": "USD",
+        "value": 0,
+        "string_value": "$0.00",
+        "subunit_to_unit": 100
+    },
+    "publisher_id": 341232721,
+    "publisher_name": "MyFitnessPal, Inc.",
+    "publisher_profile_url": "/publisher/ios/341232721",
+    "rating": 4.708660326354403,
+    "rating_breakdown": [
+        44576,
+        19069,
+        69122,
+        236037,
+        1724258
+    ],
+    "rating_count": 2093062,
+    "country_release_date": 1260237885000,
+    "current_version": "25.28.0",
+    "file_size": 242322432,
+    "first_released_in": [
+        "US",
+        "AU",
+        "CA",
+        "CN",
+        "FR",
+        "DE",
+        "GB",
+        "IT",
+        "JP",
+        "KR",
+        "RU",
+        "AR",
+        "AT",
+        "BE",
+        "BR",
+        "CL",
+        "CO",
+        "CR",
+        "HR",
+        "CZ",
+        "DK",
+        "DO",
+        "EC",
+        "EG",
+        "SV",
+        "FI",
+        "GR",
+        "GT",
+        "HK",
+        "HU",
+        "IN",
+        "ID",
+        "IE",
+        "IL",
+        "KZ",
+        "KW",
+        "LB",
+        "LT",
+        "LU",
+        "MO",
+        "MY",
+        "MX",
+        "NL",
+        "NZ",
+        "NO",
+        "PK",
+        "PA",
+        "PE",
+        "PH",
+        "PL",
+        "PT",
+        "QA",
+        "RO",
+        "SA",
+        "SG",
+        "SK",
+        "SI",
+        "ZA",
+        "ES",
+        "LK",
+        "SE",
+        "CH",
+        "TW",
+        "TH",
+        "TR",
+        "AE",
+        "UY",
+        "VE",
+        "VN",
+        "EE",
+        "LV",
+        "NI",
+        "PY",
+        "MT"
+    ],
+    "minimum_os_version": "17.0",
+    "publisher_country": "US",
+    "recent_release_date": 1752537600000,
+    "release_date": 1260237885000,
+    "release_status": "REGIONAL_RELEASE",
+    "supported_languages": [
+        "DA",
+        "NL",
+        "EN",
+        "FR",
+        "DE",
+        "ID",
+        "IT",
+        "JA",
+        "KO",
+        "MS",
+        "NB",
+        "PL",
+        "PT",
+        "RU",
+        "ZH",
+        "ES",
+        "SV",
+        "TR"
+    ],
+    "worldwide_release_date": 1260230400000,
+    "cohort_id": "cohort_af2942d2a039215f2b877ce1",
+    "worldwide_last_month_revenue": {
+        "unit": "cent",
+        "type": "currency",
+        "currency": "USD",
+        "value": 1400000000
+    },
+    "worldwide_last_month_downloads": {
+        "unit": "unit",
+        "type": "integer",
+        "value": 1000000
+    },
+    "category_rankings": {
+        "app_id": 341232718,
+        "country": "US",
+        "ipad": {
+            "top_free": {
+                "all_categories": null,
+                "primary_categories": [
+                    {
+                        "6013": 9
+                    }
+                ],
+                "sub_categories": []
+            },
+            "top_grossing": {
+                "all_categories": null,
+                "primary_categories": [
+                    {
+                        "6013": 4
+                    }
+                ],
+                "sub_categories": []
+            },
+            "top_paid": null
+        },
+        "iphone": {
+            "top_free": {
+                "all_categories": 194,
+                "primary_categories": [
+                    {
+                        "6013": 7
+                    }
+                ],
+                "sub_categories": []
+            },
+            "top_grossing": {
+                "all_categories": 44,
+                "primary_categories": [
+                    {
+                        "6013": 1
+                    }
+                ],
+                "sub_categories": []
+            },
+            "top_paid": null
+        }
+    }
+}

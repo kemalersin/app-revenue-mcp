@@ -1,0 +1,725 @@
+{
+    "game_intel_data": {},
+    "featured_reviews": [
+        {
+            "content": "One of the few good mobile games in the 2020s, and one of the best tower defenses out there- and still has constant updates. Been playing for about 2 1/2 years with only one complaint: Auto-redeploy not always being consistent. However, I can look past it with how many characters, modes, mechanics and lore/story the game has. It'll take years to run out of things to do. Warning though, early-game you will miss out on a lot of things due to not being strong enough or having enough resources saved",
+            "version": "28.4.01",
+            "date": "2025-06-02T00:00:00Z",
+            "rating": 5,
+            "app_id": "com.YoStarEN.Arknights",
+            "username": "Doom Clasher",
+            "title": "",
+            "country": "US",
+            "tags": [
+                "updates_and_maintenance"
+            ],
+            "review_id": "4533db64-cb99-4501-89c0-3ed34ba30938"
+        },
+        {
+            "content": "This game is a gacha tower defense game. The gacha rates are decent you get free pulls frequently. The game is fun and has more depth than your average tower defense game. The challenge level is consistently difficult, forcing you to think on your feet and try new tactics. There is enough content that you won't ever run out. Overall this game is excellent. Sets the bar for gacha games. Edit: 5 years later, the game is still top notch. It's easier than ever for new players jump in.",
+            "version": "25.2.61",
+            "date": "2024-12-03T00:00:00Z",
+            "rating": 5,
+            "app_id": "com.YoStarEN.Arknights",
+            "username": "Brian Stargazer",
+            "title": "",
+            "country": "US",
+            "tags": [
+                "accessibility",
+                "game_progression"
+            ],
+            "review_id": "fe682bd1-666e-4953-8765-d56aa87b99a7"
+        },
+        {
+            "content": "I've been playing Arknights off-and-on since 2020, and I keep coming back to it. I really appreciate that this game can be progressed through very casually. Most freemium mobile games tend not to value the player's time. It does take a while to save resources to pull for characters, completely develop said characters and learn the mechanics of the stages, but it's always been enjoyable for me. Fantastic character art, music, and great lore with a (skippable) story if you get into it.",
+            "version": "29.4.41",
+            "date": "2025-07-17T00:00:00Z",
+            "rating": 5,
+            "app_id": "com.YoStarEN.Arknights",
+            "username": "Michael Fletcher",
+            "title": "",
+            "country": "US",
+            "tags": [
+                "service",
+                "content",
+                "sound_and_music"
+            ],
+            "review_id": "bffb1a9d-8fe8-42ae-ac40-fd0cde862c42"
+        }
+    ],
+    "related_apps": [
+        {
+            "app_id": "com.aniplex.fategrandorder.en",
+            "app_view_url": "/android/us/aniplex-inc/app/fate-grand-order-english/com.aniplex.fategrandorder.en/",
+            "country": "US",
+            "icon_url": "https://play-lh.googleusercontent.com/WRixOqWRZQHfCgFhqfWbjCh6myA4hO4bOPQ_KJJEKrB_G8KZvl0IvNEUmRuxnfx8Tbw=s150",
+            "name": "Fate/Grand Order (English)",
+            "os": "android",
+            "price": {
+                "currency": "USD",
+                "value": 0,
+                "string_value": "$0.00",
+                "subunit_to_unit": 100
+            },
+            "publisher_id": "Aniplex+Inc.",
+            "publisher_name": "Aniplex Inc.",
+            "publisher_profile_url": "/publisher/android/Aniplex+Inc.",
+            "rating": 4.038466992503237,
+            "rating_breakdown": [
+                15653,
+                4713,
+                6318,
+                12323,
+                66772
+            ],
+            "rating_count": 105779
+        },
+        {
+            "app_id": "com.kurogame.gplay.punishing.grayraven.en",
+            "app_view_url": "/android/us/kuro-technology-hong-kong-co-limited/app/punishing-gray-raven/com.kurogame.gplay.punishing.grayraven.en/",
+            "country": "US",
+            "icon_url": "https://play-lh.googleusercontent.com/EwolwmpxNBLGQgDW4wRJy1TkMjFE5-7sE93I0gpLHSc49oJy4TON8AGHBaHdFIA8nRU=s150",
+            "name": "Punishing: Gray Raven",
+            "os": "android",
+            "price": {
+                "currency": "USD",
+                "value": 0,
+                "string_value": "$0.00",
+                "subunit_to_unit": 100
+            },
+            "publisher_id": "KURO+TECHNOLOGY+(HONG+KONG)+CO.,+LIMITED",
+            "publisher_name": "KURO TECHNOLOGY (HONG KONG) CO., LIMITED",
+            "publisher_profile_url": "/publisher/android/KURO+TECHNOLOGY+(HONG+KONG)+CO.,+LIMITED",
+            "rating": 4.427746000744047,
+            "rating_breakdown": [
+                13301,
+                5067,
+                6515,
+                17011,
+                130138
+            ],
+            "rating_count": 172032
+        },
+        {
+            "app_id": "com.bluepoch.m.en.reverse1999",
+            "app_view_url": "/android/us/bluepoch-co-ltd/app/reverse-1999/com.bluepoch.m.en.reverse1999/",
+            "country": "US",
+            "icon_url": "https://play-lh.googleusercontent.com/YvWydBLOqpHadLcSdoEtYahdBVr75Ui8PRhuFfmV_JNaXduwTXRWwP2-aBSRsQ5tQlM=s150",
+            "name": "Reverse: 1999",
+            "os": "android",
+            "price": {
+                "currency": "USD",
+                "value": 0,
+                "string_value": "$0.00",
+                "subunit_to_unit": 100
+            },
+            "publisher_id": "Bluepoch+Co.,Ltd.",
+            "publisher_name": "Bluepoch Co.,Ltd.",
+            "publisher_profile_url": "/publisher/android/Bluepoch+Co.,Ltd.",
+            "rating": 4.391386146114801,
+            "rating_breakdown": [
+                5857,
+                2324,
+                5033,
+                7735,
+                58249
+            ],
+            "rating_count": 79198
+        },
+        {
+            "app_id": "com.kakaogames.eversoul",
+            "app_view_url": "/android/us/kakao-games-corp/app/eversoul/com.kakaogames.eversoul/",
+            "country": "US",
+            "icon_url": "https://play-lh.googleusercontent.com/xjcNC5ax4F5jx78yGif_LVuRlIaA9-QrlWl5CnoYlybDteo-sLCgmTcZl0uY1Ylmzg=s150",
+            "name": "Eversoul",
+            "os": "android",
+            "price": {
+                "currency": "USD",
+                "value": 0,
+                "string_value": "$0.00",
+                "subunit_to_unit": 100
+            },
+            "publisher_id": "Kakao+Games+Corp.",
+            "publisher_name": "Kakao Games Corp.",
+            "publisher_profile_url": "/publisher/android/Kakao+Games+Corp.",
+            "rating": 4.427218548452934,
+            "rating_breakdown": [
+                5615,
+                2031,
+                3942,
+                12675,
+                61480
+            ],
+            "rating_count": 85743
+        },
+        {
+            "app_id": "com.xd.etheria.gp.glb",
+            "app_view_url": "/android/us/xd-entertainment-pte-ltd/app/etheria-restart/com.xd.etheria.gp.glb/",
+            "country": "US",
+            "icon_url": "https://play-lh.googleusercontent.com/lhz9oYEItxn1Hxy1MRMJ6pSnmZgoBaLmvB6MjF9gmbUOpHqLvnMjjtK6KqE_Y8CnOA=s150",
+            "name": "Etheria: Restart",
+            "os": "android",
+            "price": {
+                "currency": "USD",
+                "value": 0,
+                "string_value": "$0.00",
+                "subunit_to_unit": 100
+            },
+            "publisher_id": "XD+Entertainment+Pte+Ltd",
+            "publisher_name": "XD Entertainment Pte Ltd",
+            "publisher_profile_url": "/publisher/android/XD+Entertainment+Pte+Ltd",
+            "rating": 3.606994032736607,
+            "rating_breakdown": [
+                7376,
+                1967,
+                1571,
+                3239,
+                15844
+            ],
+            "rating_count": 29997
+        },
+        {
+            "app_id": "com.qookkagames.z1.gp.hk",
+            "app_view_url": "/android/us/qookka-games/app/morimens/com.qookkagames.z1.gp.hk/",
+            "country": "US",
+            "icon_url": "https://play-lh.googleusercontent.com/qtTWBjH7H7a18c7_XWcmMiKjUERdu2Ct44xQHQeT6iean9M0ipxvBbdez8MbTo4aJyo=s150",
+            "name": "Morimens",
+            "os": "android",
+            "price": {
+                "currency": "USD",
+                "value": 0,
+                "string_value": "$0.00",
+                "subunit_to_unit": 100
+            },
+            "publisher_id": "Qookka+Games",
+            "publisher_name": "Qookka Games",
+            "publisher_profile_url": "/publisher/android/Qookka+Games",
+            "rating": 4.383675591369899,
+            "rating_breakdown": [
+                417,
+                26,
+                104,
+                417,
+                2883
+            ],
+            "rating_count": 3847
+        }
+    ],
+    "top_in_app_purchases": {
+        "US": "$0.99 - $99.99 per item"
+    },
+    "versions": [
+        {
+            "date": 1748304000000,
+            "value": "29.4.41"
+        },
+        {
+            "date": 1743465600000,
+            "value": "28.4.01"
+        },
+        {
+            "date": 1737417600000,
+            "value": "27.3.61"
+        },
+        {
+            "date": 1732492800000,
+            "value": "26.3.21"
+        },
+        {
+            "date": 1727049600000,
+            "value": "25.2.61"
+        },
+        {
+            "date": 1721865600000,
+            "value": "24.2.21"
+        },
+        {
+            "date": 1716508800000,
+            "value": "23.1.41"
+        },
+        {
+            "date": 1712620800000,
+            "value": "22.1.21"
+        },
+        {
+            "date": 1708473600000,
+            "value": "21.1.01"
+        },
+        {
+            "date": 1702598400000,
+            "value": "20.0.62"
+        },
+        {
+            "date": 1697673600000,
+            "value": "19.0.01"
+        },
+        {
+            "date": 1693353600000,
+            "value": "18.9.81"
+        },
+        {
+            "date": 1688515200000,
+            "value": "17.9.62"
+        },
+        {
+            "date": 1683590400000,
+            "value": "16.9.21"
+        },
+        {
+            "date": 1678320000000,
+            "value": "15.9.01"
+        },
+        {
+            "date": 1673049600000,
+            "value": "14.0.01"
+        },
+        {
+            "date": 1669334400000,
+            "value": "13.0.01"
+        },
+        {
+            "date": 1665705600000,
+            "value": "12.0.01"
+        },
+        {
+            "date": 1660089600000,
+            "value": "11.0.01"
+        },
+        {
+            "date": 1655942400000,
+            "value": "10.0.01"
+        },
+        {
+            "date": 1650758400000,
+            "value": "9.0.01"
+        },
+        {
+            "date": 1647475200000,
+            "value": "8.0.01"
+        },
+        {
+            "date": 1642118400000,
+            "value": "7.0.01"
+        },
+        {
+            "date": 1639008000000,
+            "value": "6.0.01"
+        },
+        {
+            "date": 1632960000000,
+            "value": "5.0.01"
+        },
+        {
+            "date": 1627603200000,
+            "value": "4.0.02"
+        },
+        {
+            "date": 1624320000000,
+            "value": "3.0.01"
+        },
+        {
+            "date": 1619740800000,
+            "value": "2.0.01"
+        },
+        {
+            "date": 1616630400000,
+            "value": "1.7.10"
+        },
+        {
+            "date": 1611100800000,
+            "value": "1.5.91"
+        },
+        {
+            "date": 1606348800000,
+            "value": "1.2.90"
+        },
+        {
+            "date": 1601337600000,
+            "value": "1.1.50"
+        },
+        {
+            "date": 1594252800000,
+            "value": "0.9.02"
+        },
+        {
+            "date": 1590537600000,
+            "value": "0.9.01"
+        },
+        {
+            "date": 1581897600000,
+            "value": "0.8.14"
+        },
+        {
+            "date": 1579132800000,
+            "value": "0.8.13"
+        },
+        {
+            "date": 1577318400000,
+            "value": "Varies with device"
+        }
+    ],
+    "feature_graphic": "https://play-lh.googleusercontent.com/3B2aW4Nka4xiq35ywcD5b5Rqb6IJw0ffm_QFlHM_rV9ex7wKtb0ddFOX8LJPxkemb78",
+    "screenshots": {
+        "android": [
+            "https://play-lh.googleusercontent.com/9v2PfECSLMY7_FEUHG2US3unDGCl2b2_th-7tkQnnK0yFDDo43VVBevGy5mgZ6lrTa5s",
+            "https://play-lh.googleusercontent.com/ohF1ht6lXKY4ybjXlMrt2IjCdKBpgl1NUA6ftvNemA2iGxT0SP8HEZDseeYC5Q420Q",
+            "https://play-lh.googleusercontent.com/8Dnnwo9o932gZBRxVQOSPvG_k4qy1V6uhrDvT_w2krStdxXzKhumCV17J5jjCY1ApU4",
+            "https://play-lh.googleusercontent.com/-NL3eTKtTNbtRUzihyuyDvNUFbe9dbQpnIYvKdZvI9_L8F6zSl5xxaUBl_fqzn3j2g",
+            "https://play-lh.googleusercontent.com/YKtyqHghG0OFgSLAWuHkEegWFv-fLb3mnWN6TESS3Iy2u99BzwkIIavKDwz79Mhuid4",
+            "https://play-lh.googleusercontent.com/pX-tt_lcHTIPzfei3gS5QxMNfFqlOss_0aNq7OWTItfvZ22gurN-rKZio2ztm27joDQ",
+            "https://play-lh.googleusercontent.com/22xFnRHqcUnTCzzuldY_cbHiL8qOlgqxZZJwHsTvZYmsTbX8V_vZ9JsxBWK1LVSXMhw",
+            "https://play-lh.googleusercontent.com/uKU_DDnwzbRh5Av-Eu4Gpo6384PTlbOIaZr_JuSu449qgzNNEMi-EmCNct_GLV0Lkg",
+            "https://play-lh.googleusercontent.com/c1DjqfbNamNPfSn30wFKqzC2430MgksYs0Sa4mpjUfbP7lC5ZwFXCs7XZKPCz4ELyLQ",
+            "https://play-lh.googleusercontent.com/YE6hvic0_TWQAf28AwRkURLyMqBDb5hDIt6aYipQeddw8D-O9Rmn-v0BJ8lv2kWSXY8",
+            "https://play-lh.googleusercontent.com/sPOfr2yV7Y_eaeWxC4rhlTZpXF7EF3ABMZ8v85MY81TPg0OJnOaIhxG-02eLFHYOGQ",
+            "https://play-lh.googleusercontent.com/F5JMPFOn5NhYwC1Pjy7G2Xd4AtF0k6o6u5xtaazYVmtH5W0bTgRSjLbfTYEeCo4cIy4",
+            "https://play-lh.googleusercontent.com/1RN-zdCxC2LA_YVSyBrRAQ9C-rw8JnTBlHri4gCGCa1A8UtJM5unSga35jlM3raeLz0",
+            "https://play-lh.googleusercontent.com/uRT6Qu-ieJ7YoyGzusxOt7nHKM-1zFcz8JZsRYhJGQpcZ8d7z55VIPQxfbEGMYhcxMja",
+            "https://play-lh.googleusercontent.com/pYt4Ra5hCJQrV2v4eobj3elXIcau7fbPH0XWyW7cnz5yFzgEuodBciKChQN2KrTDfKg",
+            "https://play-lh.googleusercontent.com/rK2e49NvUeJ2iD5jw4U-a9N49uG0fv68s2ej2Td3Fm8k-S-kaFpOEp1G_uy5OupCsQ",
+            "https://play-lh.googleusercontent.com/eYNjzjbiFP4G9NPeaUCJPUtFO2r0fhIuvka7k1YgfUvek57rym8iSOqIDWi45moOcvrE"
+        ]
+    },
+    "trailers": {
+        "android": {
+            "img": "https://i.ytimg.com/vi/TRDsdsi20Ac/hqdefault.jpg",
+            "vid": "https://www.youtube.com/embed/TRDsdsi20Ac?ps=play&vq=large&rel=0&autohide=1&showinfo=0&autoplay=1&authuser=0"
+        }
+    },
+    "active": true,
+    "advertised_on_any_network": {
+        "value": "Active",
+        "name": "Advertised on Any Network",
+        "custom_fields_filter_id": {
+            "errors": [
+                "Invalid params values: [\"Active\"], name: \"Advertised on Any Network\""
+            ]
+        }
+    },
+    "categories": [
+        {
+            "name": "Strategy",
+            "id": "game_strategy"
+        },
+        {
+            "name": "Game",
+            "id": "game"
+        }
+    ],
+    "content_rating": "Teen",
+    "description": {
+        "full_description": "Take on the role of a key member of Rhodes Island, a pharmaceutical company that fights both a deadly infection and the unrest it leaves in its wake. Together with your leader Amiya, you’ll recruit Operators, train them, then assign them to various operations to protect the innocent and resist those who would thrust the world into turmoil.<br><br><br>Your tactics will determine the future of Rhodes Island. Fight for the Dawn!<br><br>・Gorgeous anime-style game with a perfect combination of RPG and strategy elements<br>・Hundreds of unique Operators across a variety of classes open up countless gameplay options<br>・Auto Deploy system conveniently allows you to free up your hands<br>・Carve out a home, just the way you want it, with the Base construction system<br>・A robust soundtrack and some of the most famous Japanese voice actors and actresses will give you a sublime auditory experience.<br><br>Permission: WRITE_EXTERNAL_STORAGE and READ_EXTERNAL_STORAGE.<br>This enables user to download a hotfix package immediately when it's available. This does not compromise user's privacy.<br><br>Minimum configuration for Android devices: 2G RAM, 2G free storage space.<br><br>Arknights Official Homepage:<br>https://www.arknights.global/<br><br>Official Discord Server:<br>https://discord.gg/arknights<br><br>Official X Account:<br>https://x.com/ArknightsEN<br><br>Official Facebook Page:<br>https://www.facebook.com/ArknightsGlobal/<br><br>Official Instagram:<br>https://www.instagram.com/arknights_messenger_official/",
+        "app_summary": "Arknights, published by a China-based company and offers in-app purchases within the range '$0.99 - $99.99 per item'. The app was last updated on 27 May 2025. Released in US on 15 January 2020 and globally on 15 January 2020. Arknights belongs to the 'Strategy' category maintaining a content rating of 'Teen'. In US, Arknights ranked 218th on the 'Top Free' chart and 17th on the 'Top Grossing' chart in the 'Strategy' category. Additionally, ranked 90th on the 'Top Grossing' chart in the 'Game' category. Last month's estimates were 20k downloads and $500k revenue. The app is available in US, Indonesia, and Philippines and being advertised actively. Sign up / Sign in to learn more about the time spent, session durations, usage & engagement (DAU, WAU, MAU), retention, churn, marketshare, growth trends, and other market statistics.",
+        "short_description": "Through the darkness, we see light"
+    },
+    "has_in_app_purchases": true,
+    "installs": "5M - 10M",
+    "language": "EN",
+    "support_url": "https://www.arknights.global",
+    "top_countries": [
+        "US",
+        "ID",
+        "PH"
+    ],
+    "valid_countries": [
+        "AR",
+        "AT",
+        "AU",
+        "AZ",
+        "BE",
+        "BG",
+        "BH",
+        "BO",
+        "BR",
+        "BY",
+        "CA",
+        "CH",
+        "CL",
+        "CO",
+        "CR",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "DO",
+        "EC",
+        "EE",
+        "ES",
+        "FI",
+        "FR",
+        "GB",
+        "GH",
+        "GR",
+        "GT",
+        "HR",
+        "HU",
+        "ID",
+        "IE",
+        "IL",
+        "IN",
+        "IT",
+        "KE",
+        "KH",
+        "LA",
+        "LK",
+        "LT",
+        "LU",
+        "LV",
+        "MA",
+        "MM",
+        "MT",
+        "MX",
+        "MY",
+        "NI",
+        "NL",
+        "NO",
+        "NZ",
+        "PA",
+        "PE",
+        "PH",
+        "PL",
+        "PT",
+        "PY",
+        "RO",
+        "RS",
+        "RU",
+        "SE",
+        "SG",
+        "SI",
+        "SK",
+        "SV",
+        "TH",
+        "TR",
+        "UA",
+        "US",
+        "UY",
+        "VE",
+        "ZA",
+        "ZW"
+    ],
+    "available_countries": [
+        "US",
+        "AU",
+        "CA",
+        "FR",
+        "DE",
+        "GB",
+        "IT",
+        "JP",
+        "KR",
+        "RU",
+        "AR",
+        "BE",
+        "BR",
+        "DK",
+        "GR",
+        "HK",
+        "IN",
+        "ID",
+        "IL",
+        "MX",
+        "MY",
+        "NL",
+        "NO",
+        "PH",
+        "PL",
+        "SA",
+        "SG",
+        "ES",
+        "SE",
+        "CH",
+        "TW",
+        "TR",
+        "AE",
+        "CZ",
+        "FI",
+        "HU",
+        "RO",
+        "CN",
+        "TH",
+        "VN",
+        "BB",
+        "VE",
+        "PA",
+        "RS",
+        "KE",
+        "MZ",
+        "LU",
+        "LV",
+        "EG",
+        "ZA",
+        "HR",
+        "GE",
+        "NZ",
+        "UA",
+        "BG",
+        "BO",
+        "MO",
+        "IE",
+        "NG",
+        "SV",
+        "CL",
+        "CY",
+        "AT",
+        "LK",
+        "MM",
+        "BY",
+        "NI",
+        "KW",
+        "IQ",
+        "PE",
+        "AZ",
+        "DO",
+        "PY",
+        "CO",
+        "OM",
+        "DZ",
+        "KH",
+        "MG",
+        "YE",
+        "SK",
+        "UY",
+        "PT",
+        "LY",
+        "LB",
+        "GH",
+        "LT",
+        "PK",
+        "AF",
+        "MT",
+        "EE",
+        "QA",
+        "UZ",
+        "BH",
+        "BM",
+        "KZ",
+        "GT",
+        "AO",
+        "EC",
+        "CR",
+        "SI",
+        "TN",
+        "MA",
+        "LA",
+        "ZW"
+    ],
+    "pre_order_countries": [],
+    "website_url": "https://www.arknights.global",
+    "app_id": "com.YoStarEN.Arknights",
+    "app_view_url": "/android/us/yostar-limited/app/arknights/com.YoStarEN.Arknights/",
+    "country": "US",
+    "icon_url": "https://play-lh.googleusercontent.com/D4DUUFQDCsH9NIEa8hjMjQSWdtNhGX1Fd_jT-23ogAb5uMMqttqQDUJcUt4K_u8RYOQ=s150",
+    "name": "Arknights",
+    "os": "android",
+    "price": {
+        "currency": "USD",
+        "value": 0,
+        "string_value": "$0.00",
+        "subunit_to_unit": 100
+    },
+    "publisher_id": "Yostar+Limited.",
+    "publisher_name": "Yostar Limited.",
+    "publisher_profile_url": "/publisher/android/Yostar+Limited.",
+    "rating": 4.375784622652414,
+    "rating_breakdown": [
+        19356,
+        5854,
+        7501,
+        14219,
+        152051
+    ],
+    "rating_count": 198981,
+    "country_release_date": 1579046400000,
+    "current_version": "29.4.41",
+    "file_size": "Varies with device",
+    "first_released_in": [
+        "US",
+        "AU",
+        "CA",
+        "FR",
+        "DE",
+        "GB",
+        "IT",
+        "RU",
+        "BE",
+        "DK",
+        "GR",
+        "NL",
+        "NO",
+        "PL",
+        "ES",
+        "SE",
+        "CH",
+        "TR",
+        "CZ",
+        "FI",
+        "HU",
+        "RO",
+        "RS",
+        "LU",
+        "LV",
+        "HR",
+        "NZ",
+        "UA",
+        "BG",
+        "IE",
+        "CY",
+        "AT",
+        "BY",
+        "AZ",
+        "SK",
+        "PT",
+        "LT",
+        "MT",
+        "EE",
+        "SI"
+    ],
+    "minimum_os_version": "7.0",
+    "publisher_country": "China",
+    "recent_release_date": 1748304000000,
+    "release_date": 1579046400000,
+    "release_status": "REGIONAL_RELEASE",
+    "supported_languages": [],
+    "worldwide_release_date": 1579046400000,
+    "cohort_id": "cohort_ff197499dd4ea6a6ee2a7746",
+    "worldwide_last_month_revenue": {
+        "unit": "cent",
+        "type": "currency",
+        "currency": "USD",
+        "value": 50000000
+    },
+    "worldwide_last_month_downloads": {
+        "unit": "unit",
+        "type": "integer",
+        "value": 20000
+    },
+    "category_rankings": {
+        "app_id": "com.YoStarEN.Arknights",
+        "country": "US",
+        "android": {
+            "top_free": {
+                "all_categories": null,
+                "primary_categories": [],
+                "sub_categories": [
+                    {
+                        "game_strategy": 177
+                    }
+                ]
+            },
+            "top_grossing": {
+                "all_categories": 97,
+                "primary_categories": [
+                    {
+                        "game": 59
+                    }
+                ],
+                "sub_categories": [
+                    {
+                        "game_strategy": 12
+                    }
+                ]
+            },
+            "top_paid": null
+        }
+    }
+}

@@ -1,6 +1,6 @@
 {
-  "name": "@jeromyfu/app-insight-mcp",
-  "version": "1.0.8",
+  "name": "app-revenue-mcp",
+  "version": "1.0.0",
   "description": "MCP server for gathering market intelligence from mobile app stores (Apple App Store & Google Play)",
   "type": "module",
   "main": "src/server.js",
@@ -25,7 +25,7 @@
     "scraper",
     "ai"
   ],
-  "author": "Jeromy Fu",
+  "author": "Kemal Ersin Yılmaz",
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.6.1",
