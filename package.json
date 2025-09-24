@@ -1,7 +1,7 @@
 {
   "name": "app-revenue-mcp",
-  "version": "1.0.0",
-  "description": "MCP server for gathering market intelligence from mobile app stores (Apple App Store & Google Play)",
+  "version": "1.0.1",
+  "description": "MCP server for gathering market intelligence from mobile app stores with revenue analytics",
   "type": "module",
   "main": "src/server.js",
   "bin": {
@@ -23,9 +23,15 @@
     "app-store",
     "google-play",
     "scraper",
-    "ai"
+    "ai",
+    "revenue",
+    "analytics"
   ],
-  "author": "Kemal Ersin Yılmaz",
+  "author": "Kemal Ersin YILMAZ",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kemalersin/app-revenue-mcp"
+  },
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.6.1",
